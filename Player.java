@@ -1,5 +1,8 @@
 public class Player {
     public Move makeMove() {
-        return null;
+        Move move = new Move("EAST");   
+
+        assert move.getDirection() != null : "Move direction should not be null";
+        return move;
     }
 }
