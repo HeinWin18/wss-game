@@ -1,8 +1,22 @@
+/**
+ * Represents the player navigating the map.
+ */
 public class Player {
-    public Move makeMove() {
-        Move move = new Move("EAST");   
+    public int x = 0;
+    public int y = 0;
 
-        assert move.getDirection() != null : "Move direction should not be null";
+    /**
+     * Generates the next move for the player.
+     * Inputs: None
+     * Outputs: Move object
+     */
+    public Move makeMove() { 
+        Log.methodStart("Player", "makeMove", "none");
+        Log.info("TEST MOVE");
+        
+        Move move = new Move("EAST");
+        
+        Log.methodEnd("Player", "makeMove", "Move(" + move.getDirection() + ")");
         return move;
     }
 }
