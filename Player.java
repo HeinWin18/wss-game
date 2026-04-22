@@ -2,12 +2,47 @@
  * Represents the player navigating the map.
  */
 public class Player {
-<<<<<<< HEAD
+
+    // Position (Kept public to not break Week 1 GameManager MVP)
     public int x = 0;
     public int y = 0;
 
+    // Stats
+    private int food;
+    private int water;
+    private int strength;
+    private int gold; 
+
     /**
-     * Generates the next move for the player.
+     * Default constructor for Week 1 MVP.
+     * Inputs: None
+     * Outputs: Player object
+     */
+    public Player() {
+        Log.methodStart("Player", "Constructor", "none");
+        this.food = 10;
+        this.water = 10;
+        this.strength = 10;
+        Log.methodEnd("Player", "Constructor", "void");
+    }
+
+    /**
+     * Constructor with starting coordinates.
+     * Inputs: startX (int), startY (int)
+     * Outputs: Player object
+     */
+    public Player(int startX, int startY) {
+        Log.methodStart("Player", "Constructor", startX + ", " + startY);
+        this.x = startX;
+        this.y = startY;
+        this.food = 10;
+        this.water = 10;
+        this.strength = 10;
+        Log.methodEnd("Player", "Constructor", "void");
+    }
+
+    /**
+     * Generates the next move for the player (Week 1 MVP).
      * Inputs: None
      * Outputs: Move object
      */
@@ -19,103 +54,85 @@ public class Player {
         
         Log.methodEnd("Player", "makeMove", "Move(" + move.getDirection() + ")");
         return move;
-=======
-
-    // Position
-    private int x;
-    private int y;
-
-    // Stats
-    private int food;
-    private int water;
-    private int strength;
-    private int gold; 
-
-    // Constructor
-    public Player(int startX, int startY) {
-        this.x = startX;
-        this.y = startY;
-
-        // Temp values (changes with difficulty?)
-        this.food = 10;
-        this.water = 10;
-        this.strength = 10;
     }
 
-    // Single move 
+    /**
+     * Moves the player based on a single Move object.
+     * Inputs: m (Move)
+     * Outputs: None
+     */
     public void move(Move m) {
+        Log.methodStart("Player", "move", "Move(" + m.getDirection() + ")");
         String dir = m.getDirection();
 
         switch (dir) {
-            case "N":
-                y++;
-                break;
-            case "S":
-                y--;
-                break;
-            case "E":
-                x++;
-                break;
-            case "W":
-                x--;
-                break;
-            case "NE":
-                y++;
-                x++;
-                break;
-            case "NW":
-                y++;
-                x--;
-                break;
-            case "SE":
-                y--;
-                x++;
-                break;
-            case "SW":
-                y--;
-                x--;
-                break;
+            case "N": y++; break;
+            case "S": y--; break;
+            case "E": 
+            case "EAST": // Added to support Week 1 MVP logic
+                x++; break;
+            case "W": x--; break;
+            case "NE": y++; x++; break;
+            case "NW": y++; x--; break;
+            case "SE": y--; x++; break;
+            case "SW": y--; x--; break;
         }
+        Log.methodEnd("Player", "move", "void");
     }
 
-    // Path move
+    /**
+     * Moves the player along a Path.
+     * Inputs: path (Path)
+     * Outputs: None
+     */
     public void move(Path path) {
+        Log.methodStart("Player", "move", "Path");
         for (Move m : path.getMoves()) {
             move(m);
         }
+        Log.methodEnd("Player", "move", "void");
     }
 
-    // Player State
+    /**
+     * Checks if the player is still alive based on stats.
+     * Inputs: None
+     * Outputs: boolean
+     */
     public boolean isAlive() {
-        return food > 0 && water > 0 && strength > 0; // Only food and water or include strength too? 
+        Log.methodStart("Player", "isAlive", "none");
+        boolean alive = food > 0 && water > 0 && strength > 0;
+        Log.methodEnd("Player", "isAlive", String.valueOf(alive));
+        return alive;
     }
 
+    /**
+     * Checks if the player has reached the eastern edge of the map.
+     * Inputs: map (Map)
+     * Outputs: boolean
+     */
     public boolean hasReachedEast(Map map) {
-        return x == map.getCols() - 1;
+        Log.methodStart("Player", "hasReachedEast", "Map");
+        boolean reached = x >= map.getCols() - 1;
+        Log.methodEnd("Player", "hasReachedEast", String.valueOf(reached));
+        return reached;
     }
 
     // Getters
-    public int getX() {
-        return x; 
-    }
-    public int getY() {
-        return y; 
-    }
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public int getFood() { return food; }
+    public int getWater() { return water; }
+    public int getStrength() { return strength; }
 
-    public int getFood() {
-        return food; 
-    }
-    public int getWater() {
-        return water; 
-    }
-    public int getStrength() {
-        return strength; 
-    }
-
-    // Temp Console Output (Game Manager will handle this later?)
+    /**
+     * Logs the current status of the player.
+     * Inputs: None
+     * Outputs: None
+     */
     public void printStatus() {
-        System.out.println("Player Position: (" + x + ", " + y + ")");
-        System.out.println("Food: " + food + " Water: " + water + " Strength: " + strength);
->>>>>>> origin/aldo-branch
+        Log.methodStart("Player", "printStatus", "none");
+        Log.info("Player Position: (" + x + ", " + y + ")");
+        Log.info("Food: " + food + " Water: " + water + " Strength: " + strength);
+        Log.methodEnd("Player", "printStatus", "void");
     }
 }
