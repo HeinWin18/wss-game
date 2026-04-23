@@ -10,8 +10,12 @@ public class Player {
     private int strength;
     private int gold; 
 
+    // References
+    private Brain brain;
+    private Vision vision;
+
     // Constructor
-    public Player(int startX, int startY) {
+    public Player(int startX, int startY, Brain brain, Vision vision) {
         this.x = startX;
         this.y = startY;
 
@@ -19,48 +23,69 @@ public class Player {
         this.food = 10;
         this.water = 10;
         this.strength = 10;
+
+        this.brain = brain;
+        this.vision = vision;
     }
 
-    // Single move 
-    public void move(Move m) {
-        String dir = m.getDirection();
+    // Player Turn Logic
+    public void nextTurn(Map map) {
+        Path path = brain.makeMove();
 
-        switch (dir) {
-            case "N":
-                y++;
-                break;
-            case "S":
-                y--;
-                break;
-            case "E":
-                x++;
-                break;
-            case "W":
-                x--;
-                break;
-            case "NE":
-                y++;
-                x++;
-                break;
-            case "NW":
-                y++;
-                x--;
-                break;
-            case "SE":
-                y--;
-                x++;
-                break;
-            case "SW":
-                y--;
-                x--;
-                break;
+        if (path != null) {
+            move(path, map);
         }
     }
 
     // Path move
     public void move(Path path) {
         for (Move m : path.getMoves()) {
-            move(m);
+            
+            int newX = x;
+            int newY = y;
+            
+            switch (m.getDirection()) {
+                case "N":
+                    y++;
+                    break;
+                case "S":
+                    y--;
+                    break;
+                case "E":
+                    x++;
+                    break;
+                case "W":
+                    x--;
+                    break;
+                case "NE":
+                    y++;
+                    x++;
+                    break;
+                case "NW":
+                    y++;
+                    x--;
+                    break;
+                case "SE":
+                    y--;
+                    x++;
+                    break;
+                case "SW":
+                    y--;
+                    x--;
+                    break;
+            }
+
+            // Check map bounds. Ignore move if player can't travel there, or cancel entire path? 
+            if (newX < 0 || newY < 0 || newX >= map.getCols() || newY >= map.getRows()) {
+                continue; 
+            }
+
+            // Update player position 
+            x = newX;
+            y = newY;
+
+            // Update player stats? Or will terrain apply costs? 
+                // food--; 
         }
     }
 
@@ -91,7 +116,7 @@ public class Player {
         return strength; 
     }
 
-    // Temp Console Output (Game Manager will handle this later?)
+    // Console output 
     public void printStatus() {
         System.out.println("Player Position: (" + x + ", " + y + ")");
         System.out.println("Food: " + food + " Water: " + water + " Strength: " + strength);
