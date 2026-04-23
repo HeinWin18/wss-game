@@ -1,3 +1,5 @@
+import java.nio.channels.IllegalSelectorException;
+
 /**
  * GameManager controls the main loop and integrates Player and Map.
  */
@@ -30,30 +32,37 @@ public class GameManager {
      */
     public void run() {
         Log.methodStart("GameManager", "run", "none");
-        
-        for (int i = 0; i < 21; i++) { 
+        while(true){
             try {
-                Move move = player.makeMove();
+                // 1. Check lose Condtion
+                if(!player.isAlive()) {
+                    Log.info("Player has lost the game.");
+                    break;
+                }
 
-                if (move == null) {
+                // 2. Check win Condition
+                if(player.hasReachedEast(map)){
+                    Log.info("Player has won the game!");
+                    break;
+                }
+
+                //3. Brain selects the next move
+                Move move = player.getBrain().makeMove();
+
+                if(move == null) {
                     throw new IllegalStateException("Move is null");
                 }
 
-                String dir = move.getDirection();
-                Log.info("Move: " + dir);
+                Log.info("Move chosen: " + move.getDirection());
 
-                if (dir.equals("EAST")) {
-                    player.x++;
-                }
+                //4. Execute move (Player class)
+                player.move(move);
 
-                Log.info("Position: (" + player.x + ", " + player.y + ")");
+                //5. Print the new coordinates and stats
+                player.printStatus();
 
-                map.getSquare(player.x, player.y);
-
-                if (player.x >= map.getCols() - 1) {
-                    Log.info("Player has reached EAST. Game Over!");
-                    break;
-                } 
+                //Get the square to prep for future terrain/trader/item interactions
+                map.getSquare(player.getX(), player.getY());
 
             } catch (Exception e) {
                 Log.error("Error occurred: " + e.getMessage());

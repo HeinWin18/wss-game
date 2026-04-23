@@ -15,10 +15,10 @@ public class Square {
      * Outputs: Square object
      */
     public Square(int x, int y) {
-        Log.methodStart("Square", "Constructor", x + ", " + y);
+        //Log.methodStart("Square", "Constructor", x + ", " + y);
         this.x = x;
         this.y = y;
-        Log.methodEnd("Square", "Constructor", "void");
+        //Log.methodEnd("Square", "Constructor", "void");
     }
 
     /**
