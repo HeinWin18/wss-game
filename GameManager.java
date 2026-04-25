@@ -17,6 +17,7 @@ public class GameManager {
         
         map = new Map(20, 20 , 1);
         player = new Player();
+        map.populate();
 
         // check for errors
         assert map != null : "Map should be initialized";

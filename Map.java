@@ -67,4 +67,18 @@ public class Map {
         Log.methodEnd("Map", "getSquare", "Square(" + sq.getX() + ", " + sq.getY() + ")");
         return sq;
     }
+
+    /**
+     * Populates the map with terrain, items, and traders.
+     * Inputs: None
+     * Outputs: None
+     */
+    public void populate() {
+        Log.methodStart("Map", "populate", "none");
+        
+        Log.info("Map populate placeholder called. (Waiting on Map team for real item generation)");
+        // Chris will put his real generation logic here later!
+        
+        Log.methodEnd("Map", "populate", "void");
+    }
 }

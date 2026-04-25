@@ -23,6 +23,8 @@ public class Player {
         this.food = 10;
         this.water = 10;
         this.strength = 10;
+
+        this.brain.setPlayer(this);
         Log.methodEnd("Player", "Constructor", "void");
     }
 
@@ -123,6 +125,9 @@ public class Player {
     public int getFood() { return food; }
     public int getWater() { return water; }
     public int getStrength() { return strength; }
+
+    private Brain brain = new AggressiveBrain();
+    public Brain getBrain() { return brain; }
 
     /**
      * Logs the current status of the player.
