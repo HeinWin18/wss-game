@@ -1,7 +1,5 @@
 public class Move 
 {
-    // William
-        // does move class also change the grid movement of the player?
     private String direction;
 
     public Move(String direction) 
