@@ -79,6 +79,11 @@ public class Player {
             case "SE": y--; x++; break;
             case "SW": y--; x--; break;
         }
+
+        this.food -= 1;
+        this.water -= 1;
+        this.strength -= 1;
+        
         Log.methodEnd("Player", "move", "void");
     }
 

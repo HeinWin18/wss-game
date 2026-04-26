@@ -45,12 +45,27 @@ public class Square {
 
     // Stubbed methods - to be implemented later
 
-    /*
-     * * public Terrain getTerrain() { return terrain; }
-     * * public Item getItem() { return item; }
-     * * public Trader getTrader() { return trader; }
-     * * public boolean hasItem() { return false; }
-     * * public boolean hasTrader() { return false; }
-     * */
+    
+     // --- Paste this at the bottom of your Square class ---
+
+    public Terrain getTerrain() { 
+        return new Terrain(); // Safe dummy terrain
+    }
+    
+    public Item getItem() { 
+        return null; // No items exist yet
+    }
+    
+    public boolean hasItem() { 
+        return false; // Tells Vision there are no items to see yet
+    }
+    
+    public boolean hasTrader() { 
+        return false; // Tells Vision there are no traders yet
+    }
+    
+    // We will leave Trader commented out until you actually need it
+    // public Trader getTrader() { return trader; }
+     
 
 }

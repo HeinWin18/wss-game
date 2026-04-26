@@ -21,6 +21,19 @@ public class Path {
     }
 
     /**
+     * Adds a move to the path.
+     * Inputs: move (Move)
+     * Outputs: None
+     */
+    public void addMove(Move move){
+        Log.methodStart("Path", "addMove", "Move: " + move.getDirection());
+        this.moves.add(move);
+        Log.methodEnd("Path", "addMove", "void");
+    }
+
+
+
+    /**
      * Returns the sequence of moves.
      * Inputs: None
      * Outputs: List of Move objects

@@ -30,7 +30,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (1, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 9 Water: 9 Strength: 9
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 1, 0
 [METHOD START] Square.getX called with inputs: none
@@ -60,7 +60,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (2, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 8 Water: 8 Strength: 8
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 2, 0
 [METHOD START] Square.getX called with inputs: none
@@ -90,7 +90,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (3, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 7 Water: 7 Strength: 7
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 3, 0
 [METHOD START] Square.getX called with inputs: none
@@ -120,7 +120,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (4, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 6 Water: 6 Strength: 6
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 4, 0
 [METHOD START] Square.getX called with inputs: none
@@ -150,7 +150,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (5, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 5 Water: 5 Strength: 5
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 5, 0
 [METHOD START] Square.getX called with inputs: none
@@ -180,7 +180,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (6, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 4 Water: 4 Strength: 4
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 6, 0
 [METHOD START] Square.getX called with inputs: none
@@ -210,7 +210,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (7, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 3 Water: 3 Strength: 3
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 7, 0
 [METHOD START] Square.getX called with inputs: none
@@ -240,7 +240,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (8, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 2 Water: 2 Strength: 2
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 8, 0
 [METHOD START] Square.getX called with inputs: none
@@ -255,7 +255,7 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
+[INFO] Resources critical (<= 2). Asking Vision for alternative direction.
 [METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
@@ -270,7 +270,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (9, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 1 Water: 1 Strength: 1
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 9, 0
 [METHOD START] Square.getX called with inputs: none
@@ -285,7 +285,7 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
+[INFO] Resources critical (<= 2). Asking Vision for alternative direction.
 [METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
@@ -300,7 +300,7 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Player.printStatus called with inputs: none
 [INFO] Player Position: (10, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
+[INFO] Food: 0 Water: 0 Strength: 0
 [METHOD END] Player.printStatus returned: void
 [METHOD START] Map.getSquare called with inputs: 10, 0
 [METHOD START] Square.getX called with inputs: none
@@ -309,280 +309,6 @@
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(10, 0)
 [METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (11, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 11, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 11
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(11, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (12, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 12, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 12
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(12, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (13, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 13, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 13
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(13, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (14, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 14, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 14
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(14, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (15, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 15, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 15
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(15, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (16, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 16, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 16
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(16, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (17, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 17, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 17
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(17, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (18, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 18, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 18
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(18, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD START] Player.move called with inputs: Move(EAST)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: EAST
-[METHOD END] Player.move returned: void
-[METHOD START] Player.printStatus called with inputs: none
-[INFO] Player Position: (19, 0)
-[INFO] Food: 10 Water: 10 Strength: 10
-[METHOD END] Player.printStatus returned: void
-[METHOD START] Map.getSquare called with inputs: 19, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 19
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(19, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: true
-[INFO] Player has won the game!
+[METHOD END] Player.isAlive returned: false
+[INFO] Player has lost the game.
 [METHOD END] GameManager.run returned: void
