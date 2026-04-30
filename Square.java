@@ -2,8 +2,8 @@ package wss;
 
 public class Square {
 
-	// private Terrain terrain;
-	// private Item item;
+	private Terrain terrain;
+	private Item item;
 	// private Trader trader;
 	private int x;
 	private int y;
@@ -23,20 +23,30 @@ public class Square {
 		return y;
 	}
 
-	// Stubbed methods - to be implemented later
+	public Terrain getTerrain() {
+		return terrain;
+	}
 
-	/*
-	 * 
-	 * public Terrain getTerrain() { return terrain; }
-	 * 
-	 * public Item getItem() { return item; }
-	 * 
-	 * public Trader getTrader() { return trader; }
-	 * 
-	 * public boolean hasItem() { return false; }
-	 * 
-	 * public boolean hasTrader() { return false; }
-	 * 
-	 */
+	public Item getItem() {
+		return item;
+	}
+
+	// Returns true if this square has an item
+	public boolean hasItem() {
+		return item != null;
+	}
+
+	// Setter methods - used by Map.populate()
+	public void setTerrain(Terrain t) {
+		this.terrain = t;
+	}
+
+	public void setItem(Item i) {
+		this.item = i;
+	}
+
+	// Stubbed - to be implemented when Trader is ready
+	// public Trader getTrader() { return trader; }
+	// public boolean hasTrader() { return false; }
 
 }
