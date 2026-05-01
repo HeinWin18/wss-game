@@ -46,32 +46,32 @@ public class Player {
             
             switch (m.getDirection()) {
                 case "N":
-                    y++;
+                    newY++;
                     break;
                 case "S":
-                    y--;
+                    newY--;
                     break;
                 case "E":
-                    x++;
+                    newX++;
                     break;
                 case "W":
-                    x--;
+                    newX--;
                     break;
                 case "NE":
-                    y++;
-                    x++;
+                    newY++;
+                    newX++;
                     break;
                 case "NW":
-                    y++;
-                    x--;
+                    newY++;
+                    newX--;
                     break;
                 case "SE":
-                    y--;
-                    x++;
+                    newY--;
+                    newX++;
                     break;
                 case "SW":
-                    y--;
-                    x--;
+                    newY--;
+                    newX--;
                     break;
             }
 
@@ -96,6 +96,38 @@ public class Player {
 
     public boolean hasReachedEast(Map map) {
         return x == map.getCols() - 1;
+    }
+
+    // Player Stats
+    // Terrain will call this method to apply cost of moving
+    public void reduceStats(int foodCost, int waterCost, int strengthCost) {
+        this.food -= foodCost;
+        this.water -= waterCost;
+        this.strength -= strengthCost;
+
+        if (food < 0) {
+            food = 0;
+        }
+
+        if (water < 0) {
+            water = 0;
+        }
+        
+        if (strength < 0) {
+            strength = 0;
+        }
+    }
+
+    public void addFood(int amount) {
+    this.food += amount;
+    }
+
+    public void addWater(int amount) {
+        this.water += amount;
+    }
+
+    public void addGold(int amount) {
+        this.gold += amount;
     }
 
     // Getters
