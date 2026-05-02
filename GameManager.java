@@ -70,20 +70,20 @@ public class GameManager {
                     Log.info("Stepped on " + currentTerrain.getClass().getSimpleName() + ", applied effect.");
                 }
 
-                // //Check for and Collect Items
-                // if (currentSquare.hasItem()){
-                //     Item item  = currentSquare.getItem();
-                //     //need to add collectItem(Item i) to the player class
-                //     player.collectItem(item);
-                //     Log.info("Collected item: " + item.getClass().getSimpleName() + "!");
+                //Check for and Collect Items
+                if (currentSquare.hasItem()){
+                    Item item  = currentSquare.getItem();
+                    //need to add collectItem(Item i) to the player class
+                    player.collectItem(item);
+                    Log.info("Collected item: " + item.getClass().getSimpleName() + "!");
 
-                //     // TODO: Remove item from the square after collection
-                //      //currentSquare.removeItem();
-                // }
+                    // TODO: Remove item from the square after collection
+                     //currentSquare.removeItem();
+                }
 
                 //Get the square to prep for future terrain/trader/item interactions
                 map.getSquare(player.getX(), player.getY());
-                
+
             } catch (Exception e) {
                 Log.error("Error occurred: " + e.getMessage());
                 break;

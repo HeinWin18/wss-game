@@ -1,6 +1,14 @@
 public class GoldBonus extends Item {
-    public GoldBonus() {
-        // Empty constructor for now
+
+    private int amount;
+
+    public GoldBonus(int amount) {
+        super("Gold Bonus", amount, false);
+        this.amount = amount;
     }
-    
+
+    @Override
+    public void collect(Player player) {
+        player.addGold(amount);
+    }
 }
