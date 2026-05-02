@@ -29,6 +29,11 @@ public class Terrain {
     
     // applyEffect(player : Player) - deducts strengthCost, waterCost, and foodCost from the player’s stats when the player enters this square
     public void applyEffect(Player p) {
-    	p.reduceStats(this.foodCost, this.waterCost, this.strengthCost)
+        System.out.println("[LOG] Player entered " + this.getType());
+        System.out.println("[LOG] Deducting: " + this.foodCost + " Food, " + this.waterCost + " Water, " + this.strengthCost + " Strength.");
+        
+        p.reduceStats(this.foodCost, this.waterCost, this.strengthCost);
+        
+        System.out.println("[LOG] Player stats remaining - Food: " + p.getFood() + ", Water: " + p.getWater() + ", Strength: " + p.getStrength());
     }
 }

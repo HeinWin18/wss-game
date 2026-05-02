@@ -59,16 +59,16 @@ public class GameManager {
                 //4. Execute move (Player class)
                 player.move(move);
 
-                // //5. Week 3 Integration logic: Apply terrain costs, item pickups.
-                // // Get the exact square the player landed on
-                // Square currentSquare = map.getSquare(player.getX(), player.getY());
+                //5. Week 3 Integration logic: Apply terrain costs, item pickups.
+                // Get the exact square the player landed on
+                Square currentSquare = map.getSquare(player.getX(), player.getY());
 
-                // // Apply terrain costs
-                // Terrain currentTerrain = currentSquare.getTerrain();
-                // if (currentTerrain != null){
-                //     currentTerrain.applyEffect(player); // This will modify the player's stats based on the terrain type
-                //     Log.info("Stepped on " + currentTerrain.getClass().getSimpleName() + ", applied effect.");
-                // }
+                // Apply terrain costs
+                Terrain currentTerrain = currentSquare.getTerrain();
+                if (currentTerrain != null){
+                    currentTerrain.applyEffect(player); // This will modify the player's stats based on the terrain type
+                    Log.info("Stepped on " + currentTerrain.getClass().getSimpleName() + ", applied effect.");
+                }
 
                 // //Check for and Collect Items
                 // if (currentSquare.hasItem()){
@@ -81,9 +81,9 @@ public class GameManager {
                 //      //currentSquare.removeItem();
                 // }
 
-                // //Get the square to prep for future terrain/trader/item interactions
-                // map.getSquare(player.getX(), player.getY());
-
+                //Get the square to prep for future terrain/trader/item interactions
+                map.getSquare(player.getX(), player.getY());
+                
             } catch (Exception e) {
                 Log.error("Error occurred: " + e.getMessage());
                 break;

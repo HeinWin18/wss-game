@@ -80,9 +80,9 @@ public class Player {
             case "SW": y--; x--; break;
         }
 
-        this.food -= 1;
-        this.water -= 1;
-        this.strength -= 1;
+        //this.food -= 1;
+        //this.water -= 1;
+        //this.strength -= 1;
         
         Log.methodEnd("Player", "move", "void");
     }
@@ -98,6 +98,17 @@ public class Player {
             move(m);
         }
         Log.methodEnd("Player", "move", "void");
+    }
+
+    public void reduceStats(int foodCost, int waterCost, int strengthCost) {
+        this.food -= foodCost;
+        this.water -= waterCost;
+        this.strength -= strengthCost;
+        Log.info("Player stats reduced by - Food: " + foodCost + ", Water: " + waterCost + ", Strength: " + strengthCost);
+    }
+
+    public void collectItem(Item item){
+        // Logic will go here after merging Aldo's branch
     }
 
     /**
