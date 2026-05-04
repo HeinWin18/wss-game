@@ -3,8 +3,8 @@
  */
 public class Square {
 
-    // private Terrain terrain;
-    // private Item item;
+    private Terrain terrain;
+    private Item item;
     // private Trader trader;
     private int x;
     private int y;
@@ -15,10 +15,10 @@ public class Square {
      * Outputs: Square object
      */
     public Square(int x, int y) {
-        Log.methodStart("Square", "Constructor", x + ", " + y);
+        //Log.methodStart("Square", "Constructor", x + ", " + y);
         this.x = x;
         this.y = y;
-        Log.methodEnd("Square", "Constructor", "void");
+        //Log.methodEnd("Square", "Constructor", "void");
     }
 
     /**
@@ -43,14 +43,37 @@ public class Square {
         return y;
     }
 
-    // Stubbed methods - to be implemented later
+    public Terrain getTerrain() {
+        return terrain;
+    }
 
-    /*
-     * * public Terrain getTerrain() { return terrain; }
-     * * public Item getItem() { return item; }
-     * * public Trader getTrader() { return trader; }
-     * * public boolean hasItem() { return false; }
-     * * public boolean hasTrader() { return false; }
-     * */
+    public Item getItem() {
+        return item;
+    }
 
+    // Returns true if this square has an item
+    public boolean hasItem() {
+        return item != null;
+    }
+
+    // Removes the item from the square after the player collects it
+    public void removeItem() {
+        this.item = null;
+    }
+
+    // Setter methods - used by Map.populate()
+    public void setTerrain(Terrain t) {
+        this.terrain = t;
+    }
+
+    public void setItem(Item i) {
+        this.item = i;
+    }
+
+    public boolean hasTrader() { 
+        return false; // Tells Vision there are no traders yet
+    }
+    
+    // Stubbed - to be implemented when Trader is ready
+    // public Trader getTrader() { return trader; }
 }

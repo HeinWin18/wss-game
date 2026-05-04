@@ -1,10 +1,12 @@
+/**
+ * FocusedVision can only see one direction: East.
+ */
 public class FocusedVision extends Vision {
 
-	// Constructor
-	// FocusedVision can only see one direction: East
-	public FocusedVision(Map map, int x, int y) {
-		super(map, x, y);
-		visibleDirections = new String[] { "E" };
-	}
-
+    public FocusedVision(Map map, int x, int y) {
+        super(map, x, y);
+        Log.methodStart("FocusedVision", "Constructor", "Map, " + x + ", " + y);
+        this.visibleDirections = new String[] { "E" };
+        Log.methodEnd("FocusedVision", "Constructor", "void");
+    }
 }

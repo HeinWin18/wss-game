@@ -1,279 +1,278 @@
+/**
+ * FarSightVision can see up to two squares away in North, South, and East directions.
+ */
 public class FarSightVision extends Vision {
 
-	// FarSightVision has an extended range compared to other Vision types
-	private int range = 2;
+    private int range = 2;
 
-	// Constructor
-	// FarSightVision can see up to two squares away in North, South, and East
-	// directions
-	public FarSightVision(Map map, int x, int y) {
-		super(map, x, y);
-		visibleDirections = new String[] { "N", "S", "E" };
-	}
+    public FarSightVision(Map map, int x, int y) {
+        super(map, x, y);
+        Log.methodStart("FarSightVision", "Constructor", "Map, " + x + ", " + y);
+        this.visibleDirections = new String[] { "N", "S", "E" };
+        Log.methodEnd("FarSightVision", "Constructor", "void");
+    }
 
-	// Returns the square 2 steps away in the given direction
-	private Square getFarNeighbor(String dir) {
-		int newX = x;
-		int newY = y;
+    private Square getFarNeighbor(String dir) {
+        Log.methodStart("FarSightVision", "getFarNeighbor", dir);
+        int newX = x;
+        int newY = y;
 
-		switch (dir) {
-		case "N":
-			newY = y - range;
-			break;
-		case "S":
-			newY = y + range;
-			break;
-		case "E":
-			newX = x + range;
-			break;
-		}
+        switch (dir) {
+            case "N": newY = y - range; break;
+            case "S": newY = y + range; break;
+            case "E": newX = x + range; break;
+        }
 
-		return map.getSquare(newX, newY);
-	}
+        Square sq = map.getSquare(newX, newY);
+        Log.methodEnd("FarSightVision", "getFarNeighbor", sq == null ? "null" : "Square");
+        return sq;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the first square with a FoodBonus. Returns null if none
-	// found.
-	@Override
-	public Path closestFood() {
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof FoodBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof FoodBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path closestFood() {
+        Log.methodStart("FarSightVision", "closestFood", "none");
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof FoodBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestFood", "Path(near)");
+                return p;
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof FoodBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestFood", "Path(far)");
+                return p;
+            }
+        }
+        Log.methodEnd("FarSightVision", "closestFood", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the second square with a FoodBonus. Returns null if fewer
-	// than two found.
-	@Override
-	public Path secondClosestFood() {
-		boolean foundFirst = false;
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof FoodBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof FoodBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path secondClosestFood() {
+        Log.methodStart("FarSightVision", "secondClosestFood", "none");
+        boolean foundFirst = false;
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof FoodBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestFood", "Path(near)");
+                    return p;
+                }
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof FoodBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestFood", "Path(far)");
+                    return p;
+                }
+            }
+        }
+        Log.methodEnd("FarSightVision", "secondClosestFood", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the first square with a WaterBonus. Returns null if none
-	// found.
-	@Override
-	public Path closestWater() {
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof WaterBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof WaterBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path closestWater() {
+        Log.methodStart("FarSightVision", "closestWater", "none");
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof WaterBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestWater", "Path(near)");
+                return p;
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof WaterBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestWater", "Path(far)");
+                return p;
+            }
+        }
+        Log.methodEnd("FarSightVision", "closestWater", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the second square with a WaterBonus. Returns null if fewer
-	// than two found.
-	@Override
-	public Path secondClosestWater() {
-		boolean foundFirst = false;
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof WaterBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof WaterBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path secondClosestWater() {
+        Log.methodStart("FarSightVision", "secondClosestWater", "none");
+        boolean foundFirst = false;
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof WaterBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestWater", "Path(near)");
+                    return p;
+                }
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof WaterBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestWater", "Path(far)");
+                    return p;
+                }
+            }
+        }
+        Log.methodEnd("FarSightVision", "secondClosestWater", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the first square with a GoldBonus. Returns null if none
-	// found.
-	@Override
-	public Path closestGold() {
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof GoldBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof GoldBonus) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path closestGold() {
+        Log.methodStart("FarSightVision", "closestGold", "none");
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof GoldBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestGold", "Path(near)");
+                return p;
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof GoldBonus) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestGold", "Path(far)");
+                return p;
+            }
+        }
+        Log.methodEnd("FarSightVision", "closestGold", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the second square with a GoldBonus. Returns null if fewer
-	// than two found.
-	@Override
-	public Path secondClosestGold() {
-		boolean foundFirst = false;
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasItem() && near.getItem() instanceof GoldBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasItem() && far.getItem() instanceof GoldBonus) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path secondClosestGold() {
+        Log.methodStart("FarSightVision", "secondClosestGold", "none");
+        boolean foundFirst = false;
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasItem() && near.getItem() instanceof GoldBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestGold", "Path(near)");
+                    return p;
+                }
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasItem() && far.getItem() instanceof GoldBonus) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestGold", "Path(far)");
+                    return p;
+                }
+            }
+        }
+        Log.methodEnd("FarSightVision", "secondClosestGold", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the first square with a Trader. Returns null if none found.
-	@Override
-	public Path closestTrader() {
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasTrader()) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasTrader()) {
-				Path p = new Path();
-				p.addMove(new Move(dir));
-				return p;
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path closestTrader() {
+        Log.methodStart("FarSightVision", "closestTrader", "none");
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasTrader()) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestTrader", "Path(near)");
+                return p;
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasTrader()) {
+                Path p = new Path();
+                p.addMove(new Move(dir));
+                Log.methodEnd("FarSightVision", "closestTrader", "Path(far)");
+                return p;
+            }
+        }
+        Log.methodEnd("FarSightVision", "closestTrader", "null");
+        return null;
+    }
 
-	// Checks square 1 out first, then square 2 out.
-	// Returns a Path to the second square with a Trader. Returns null if fewer than
-	// two found.
-	@Override
-	public Path secondClosestTrader() {
-		boolean foundFirst = false;
-		for (String dir : visibleDirections) {
-			Square near = getNeighbor(dir);
-			if (near != null && near.hasTrader()) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-			Square far = getFarNeighbor(dir);
-			if (far != null && far.hasTrader()) {
-				if (!foundFirst) {
-					foundFirst = true;
-				} else {
-					Path p = new Path();
-					p.addMove(new Move(dir));
-					return p;
-				}
-			}
-		}
-		return null;
-	}
+    @Override
+    public Path secondClosestTrader() {
+        Log.methodStart("FarSightVision", "secondClosestTrader", "none");
+        boolean foundFirst = false;
+        for (String dir : visibleDirections) {
+            Square near = getNeighbor(dir);
+            if (near != null && near.hasTrader()) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestTrader", "Path(near)");
+                    return p;
+                }
+            }
+            Square far = getFarNeighbor(dir);
+            if (far != null && far.hasTrader()) {
+                if (!foundFirst) foundFirst = true;
+                else {
+                    Path p = new Path();
+                    p.addMove(new Move(dir));
+                    Log.methodEnd("FarSightVision", "secondClosestTrader", "Path(far)");
+                    return p;
+                }
+            }
+        }
+        Log.methodEnd("FarSightVision", "secondClosestTrader", "null");
+        return null;
+    }
 
-	// Checks both squares in each direction, compares cumulative movement cost,
-	// and returns a Path to the direction with the lowest total cost.
-	@Override
-	public Path easiestPath() {
-		String easiestDir = null;
-		int lowestCost = Integer.MAX_VALUE;
+    @Override
+    public Path easiestPath() {
+        Log.methodStart("FarSightVision", "easiestPath", "none");
+        String easiestDir = null;
+        int lowestCost = Integer.MAX_VALUE;
 
-		for (String dir : visibleDirections) {
-			int totalCost = 0;
+        for (String dir : visibleDirections) {
+            int totalCost = 0;
 
-			Square near = getNeighbor(dir);
-			if (near != null) {
-				totalCost += near.getTerrain().getStrengthCost();
-			}
+            Square near = getNeighbor(dir);
+            if (near != null) {
+                totalCost += near.getTerrain().getStrengthCost();
+            }
 
-			Square far = getFarNeighbor(dir);
-			if (far != null) {
-				totalCost += far.getTerrain().getStrengthCost();
-			}
+            Square far = getFarNeighbor(dir);
+            if (far != null) {
+                totalCost += far.getTerrain().getStrengthCost();
+            }
 
-			if (near != null && totalCost < lowestCost) {
-				lowestCost = totalCost;
-				easiestDir = dir;
-			}
-		}
+            if (near != null && totalCost < lowestCost) {
+                lowestCost = totalCost;
+                easiestDir = dir;
+            }
+        }
 
-		if (easiestDir != null) {
-			Path p = new Path();
-			p.addMove(new Move(easiestDir));
-			return p;
-		}
-		return null;
-	}
-
+        if (easiestDir != null) {
+            Path p = new Path();
+            p.addMove(new Move(easiestDir));
+            Log.methodEnd("FarSightVision", "easiestPath", "Path(" + easiestDir + ")");
+            return p;
+        }
+        
+        Log.methodEnd("FarSightVision", "easiestPath", "null");
+        return null;
+    }
 }
