@@ -3,19 +3,11 @@
  */
 public class Square {
 
-<<<<<<< HEAD
-    // private Terrain terrain;
-    // private Item item;
+    private Terrain terrain;
+    private Item item;
     // private Trader trader;
     private int x;
     private int y;
-=======
-	private Terrain terrain;
-	private Item item;
-	// private Trader trader;
-	private int x;
-	private int y;
->>>>>>> 533d2bfe47ca99a47efb9bac30f81544ea2b821f
 
     /**
      * Constructs a Square at the given coordinates.
@@ -51,57 +43,37 @@ public class Square {
         return y;
     }
 
-<<<<<<< HEAD
-    // Stubbed methods - to be implemented later
+    public Terrain getTerrain() {
+        return terrain;
+    }
 
-    
-     // --- Paste this at the bottom of your Square class ---
+    public Item getItem() {
+        return item;
+    }
 
-    public Terrain getTerrain() { 
-        return new Terrain(); // Safe dummy terrain
+    // Returns true if this square has an item
+    public boolean hasItem() {
+        return item != null;
     }
-    
-    public Item getItem() { 
-        return null; // No items exist yet
+
+    // Removes the item from the square after the player collects it
+    public void removeItem() {
+        this.item = null;
     }
-    
-    public boolean hasItem() { 
-        return false; // Tells Vision there are no items to see yet
+
+    // Setter methods - used by Map.populate()
+    public void setTerrain(Terrain t) {
+        this.terrain = t;
     }
-    
+
+    public void setItem(Item i) {
+        this.item = i;
+    }
+
     public boolean hasTrader() { 
         return false; // Tells Vision there are no traders yet
     }
     
-    // We will leave Trader commented out until you actually need it
+    // Stubbed - to be implemented when Trader is ready
     // public Trader getTrader() { return trader; }
-     
-=======
-	public Terrain getTerrain() {
-		return terrain;
-	}
-
-	public Item getItem() {
-		return item;
-	}
-
-	// Returns true if this square has an item
-	public boolean hasItem() {
-		return item != null;
-	}
-
-	// Setter methods - used by Map.populate()
-	public void setTerrain(Terrain t) {
-		this.terrain = t;
-	}
-
-	public void setItem(Item i) {
-		this.item = i;
-	}
-
-	// Stubbed - to be implemented when Trader is ready
-	// public Trader getTrader() { return trader; }
-	// public boolean hasTrader() { return false; }
->>>>>>> 533d2bfe47ca99a47efb9bac30f81544ea2b821f
-
 }

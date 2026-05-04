@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,17 +7,10 @@ import java.util.List;
 public class Path {
 
     private List<Move> moves;
-=======
-public class Path {
-
-    private List<Move> moves;
-
->>>>>>> 0c17719b876b6b06d578a090a4eef566862aecfd
     private int totalCost;
     private int waterCost;
     private int foodCost;
 
-<<<<<<< HEAD
     /**
      * Basic constructor.
      * Inputs: None
@@ -52,44 +44,23 @@ public class Path {
     public List<Move> getMoves() {
         Log.methodStart("Path", "getMoves", "none");
         Log.methodEnd("Path", "getMoves", "List<Move> size: " + moves.size());
-=======
-    public Path() {
-        moves = new ArrayList<>();
-        totalCost = 0;
-        waterCost = 0;
-        foodCost = 0;
-    }
-
-    public void addMove(Move move) {
-        moves.add(move);
-    }
-
-    public List<Move> getMoves() {
->>>>>>> 0c17719b876b6b06d578a090a4eef566862aecfd
         return moves;
     }
 
     // Getters
     public int getTotalCost() {
-<<<<<<< HEAD
         Log.methodStart("Path", "getTotalCost", "none");
         Log.methodEnd("Path", "getTotalCost", String.valueOf(totalCost));
-=======
->>>>>>> 0c17719b876b6b06d578a090a4eef566862aecfd
         return totalCost;
     }
 
     public int getWaterCost() {
-<<<<<<< HEAD
         Log.methodStart("Path", "getWaterCost", "none");
         Log.methodEnd("Path", "getWaterCost", String.valueOf(waterCost));
-=======
->>>>>>> 0c17719b876b6b06d578a090a4eef566862aecfd
         return waterCost;
     }
 
     public int getFoodCost() {
-<<<<<<< HEAD
         Log.methodStart("Path", "getFoodCost", "none");
         Log.methodEnd("Path", "getFoodCost", String.valueOf(foodCost));
         return foodCost;
@@ -110,16 +81,5 @@ public class Path {
         Log.info(pathString.toString().trim());
         
         Log.methodEnd("Path", "printPath", "void");
-=======
-        return foodCost;
-    }
-
-    // Console Output
-    public void printPath() {
-        for (Move m : moves) {
-            System.out.print(m.getDirection() + " ");
-        }
-        System.out.println();
->>>>>>> 0c17719b876b6b06d578a090a4eef566862aecfd
     }
 }
