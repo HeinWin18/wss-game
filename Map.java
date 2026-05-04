@@ -93,8 +93,47 @@ public class Map {
 		return new GoldBonus();
 	}
 
-	// Fills the grid with Square objects, assigns Terrain and Items randomly.
-	// The starting square (x = 0, y = rows/2) is always Plains with no item.
+	// Randomly places a Trader on a square based on difficulty.
+	// Easy: 20% chance, Medium: 15% chance, Hard: 10% chance.
+	// Trader type split by difficulty:
+	// Easy: 70% PatientTrader, 30% ImpatientTrader
+	// Medium: 50% PatientTrader, 50% ImpatientTrader
+	// Hard: 40% PatientTrader, 60% ImpatientTrader
+	private Trader getRandomTrader(Random rand) {
+		int spawnRoll = rand.nextInt(100) + 1;
+		int typeRoll = rand.nextInt(100) + 1;
+
+		// Easy
+		if (difficulty == 1 && spawnRoll <= 20) {
+			if (typeRoll <= 70)
+				return new PatientTrader();
+			else
+				return new ImpatientTrader();
+		}
+
+		// Medium
+		if (difficulty == 2 && spawnRoll <= 15) {
+			if (typeRoll <= 50)
+				return new PatientTrader();
+			else
+				return new ImpatientTrader();
+		}
+
+		// Hard
+		if (difficulty == 3 && spawnRoll <= 10) {
+			if (typeRoll <= 40)
+				return new PatientTrader();
+			else
+				return new ImpatientTrader();
+		}
+
+		return null;
+	}
+
+	// Fills the grid with Square objects, assigns Terrain, Items, and Traders
+	// randomly.
+	// The starting square (x = 0, y = rows/2) is always Plains with no item or
+	// trader.
 	public void populate() {
 		Random rand = new Random();
 		int startY = rows / 2;
@@ -104,11 +143,12 @@ public class Map {
 				squares[i][j] = new Square(i, j);
 
 				if (i == 0 && j == startY) {
-					// Starting square - safe Plains, no item
+					// Starting square - safe Plains, no item or trader
 					squares[i][j].setTerrain(new Plains());
 				} else {
 					squares[i][j].setTerrain(getRandomTerrain(rand));
 					squares[i][j].setItem(getRandomItem(rand));
+					squares[i][j].setTrader(getRandomTrader(rand));
 				}
 			}
 		}

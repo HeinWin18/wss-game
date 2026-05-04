@@ -4,7 +4,7 @@ public class Square {
 
 	private Terrain terrain;
 	private Item item;
-	// private Trader trader;
+	private Trader trader;
 	private int x;
 	private int y;
 
@@ -31,9 +31,18 @@ public class Square {
 		return item;
 	}
 
+	public Trader getTrader() {
+		return trader;
+	}
+
 	// Returns true if this square has an item
 	public boolean hasItem() {
 		return item != null;
+	}
+
+	// Returns true if this square has a trader
+	public boolean hasTrader() {
+		return trader != null;
 	}
 
 	// Setter methods - used by Map.populate()
@@ -45,8 +54,8 @@ public class Square {
 		this.item = i;
 	}
 
-	// Stubbed - to be implemented when Trader is ready
-	// public Trader getTrader() { return trader; }
-	// public boolean hasTrader() { return false; }
+	public void setTrader(Trader t) {
+		this.trader = t;
+	}
 
 }
