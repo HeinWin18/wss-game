@@ -9,11 +9,25 @@ public class Map {
 	private int difficulty;
 	private Square[][] squares;
 
-	// Constructor (20x20 size matrix for now)
+	// Constructor - size depends on difficulty:
+	// Easy (1): 10x10, Medium (2): 20x20, Hard (3): 30x30
 	public Map(int difficulty) {
-		this.rows = 20;
-		this.cols = 20;
 		this.difficulty = difficulty;
+
+		if (difficulty == 1) {
+			this.rows = 10;
+			this.cols = 10;
+		} else if (difficulty == 2) {
+			this.rows = 20;
+			this.cols = 20;
+		} else if (difficulty == 3) {
+			this.rows = 30;
+			this.cols = 30;
+		} else {
+			this.rows = 20;
+			this.cols = 20;
+		}
+
 		this.squares = new Square[rows][cols];
 	}
 
@@ -64,7 +78,7 @@ public class Map {
 			return new Mountain();
 
 			// Hard
-		} else {
+		} else if (difficulty == 3) {
 			if (roll <= 10)
 				return new Plains();
 			if (roll <= 30)
@@ -74,21 +88,29 @@ public class Map {
 			if (roll <= 80)
 				return new Swamp();
 			return new Mountain();
+
+			// Invalid difficulty
+		} else {
+			return null;
 		}
 	}
 
-	// Picks a random Item, or returns null (70% chance of no item)
+	// Picks a random Item, or returns null (35% chance of no item).
+	// 50/50 chance of FoodBonus or WaterBonus if roll is between 36-95.
+	// GoldBonus if roll is above 95.
 	private Item getRandomItem(Random rand) {
 		int roll = rand.nextInt(100) + 1;
 
-		if (roll <= 70)
+		if (roll <= 35)
 			return null;
 
-		if (roll <= 85)
-			return new FoodBonus();
-
-		if (roll <= 95)
-			return new WaterBonus();
+		if (roll <= 95) {
+			// 50/50 chance of FoodBonus or WaterBonus
+			if (rand.nextInt(2) == 0)
+				return new FoodBonus();
+			else
+				return new WaterBonus();
+		}
 
 		return new GoldBonus();
 	}
