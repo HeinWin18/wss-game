@@ -1,51 +1,28 @@
-public class Move 
-{
+/**
+ * Represents a movement action taken by an entity.
+ */
+public class Move {
     private String direction;
-
-    public Move(String direction) 
-    {
-        if (isValidDirection(direction))
-             {
-            this.direction = direction.toUpperCase();
-        } else {
-            throw new IllegalArgumentException("Invalid move direction: " + direction);
-        }
+    
+    /**
+     * Constructs a Move object with a target direction.
+     * Inputs: direction (String)
+     * Outputs: Move object
+     */
+    public Move(String direction) {
+        Log.methodStart("Move", "Constructor", direction);
+        this.direction = direction;
+        Log.methodEnd("Move", "Constructor", "void");
     }
-
-    public String getDirection() 
-    {
+    
+    /**
+     * Retrieves the direction string.
+     * Inputs: None
+     * Outputs: direction (String)
+     */
+    public String getDirection() {
+        Log.methodStart("Move", "getDirection", "none");
+        Log.methodEnd("Move", "getDirection", direction);
         return direction;
-    }
-
-    public void setDirection(String direction) 
-    {
-        if (isValidDirection(direction)) {
-            this.direction = direction.toUpperCase();
-        } else {
-            throw new IllegalArgumentException("Invalid move direction: " + direction);
-        }
-    }
-
-    private boolean isValidDirection(String direction) 
-    {
-        if (direction == null) return false;
-
-        direction = direction.toUpperCase();
-
-        return direction.equals("N") ||
-               direction.equals("S") ||
-               direction.equals("E") ||
-               direction.equals("W") ||
-               direction.equals("NE") ||
-               direction.equals("NW") ||
-               direction.equals("SE") ||
-               direction.equals("SW") ||
-               direction.equals("REST");
-    }
-
-    @Override
-    public String toString()
-     {
-        return "Move Direction: " + direction;
     }
 }
