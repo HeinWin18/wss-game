@@ -12,6 +12,15 @@ public class Player {
     private int water;
     private int strength;
     private int gold; 
+    private Map map;
+
+    public void setMap(Map m) {
+        this.map = m;
+    }
+
+    public Map getMap(){
+        return this.map;
+    }
 
     // References
     private Brain brain = new AggressiveBrain(); // Default to AggressiveBrain for Week 1 MVP
@@ -20,12 +29,11 @@ public class Player {
     /**
      * Default constructor for Week 1 MVP.
      */
+    
     public Player() {
+        // Calls the Week 3 constructor with default values
+        this(0, 0, new AggressiveBrain(), null); 
         Log.methodStart("Player", "Constructor", "none");
-        this.food = 10;
-        this.water = 10;
-        this.strength = 10;
-        this.brain.setPlayer(this);
         Log.methodEnd("Player", "Constructor", "void");
     }
 
@@ -33,30 +41,33 @@ public class Player {
      * Constructor with starting coordinates (Week 1 MVP).
      */
     public Player(int startX, int startY) {
+        // Calls the Week 3 constructor with custom coordinates but default brain
+        this(startX, startY, new AggressiveBrain(), null);
         Log.methodStart("Player", "Constructor", startX + ", " + startY);
-        this.x = startX;
-        this.y = startY;
-        this.food = 10;
-        this.water = 10;
-        this.strength = 10;
         Log.methodEnd("Player", "Constructor", "void");
     }
 
     /**
-     * Constructor for Week 3 integration.
+     * Constructor for Week 3 integration. (The Master Constructor)
      */
     public Player(int startX, int startY, Brain brain, Vision vision) {
         Log.methodStart("Player", "Constructor", "Week 3 Full");
         this.x = startX;
         this.y = startY;
 
-        this.food = 10;
-        this.water = 10;
-        this.strength = 10;
+        this.food = 100;
+        this.water = 100;
+        this.strength = 100;
         this.gold = 0;
 
         this.brain = brain;
         this.vision = vision;
+        
+        // CRITICAL FIX: Link the brain to the player!
+        if (this.brain != null) {
+            this.brain.setPlayer(this);
+        }
+        
         Log.methodEnd("Player", "Constructor", "void");
     }
 
@@ -147,6 +158,20 @@ public class Player {
         if (strength < 0) { strength = 0; }
 
         Log.info("Player stats reduced by - Food: " + foodCost + ", Water: " + waterCost + ", Strength: " + strengthCost);
+    }
+
+    /**
+     * Skips a turn to regain strength, at the cost of food and water.
+     */
+    public void rest() {
+        Log.methodStart("Player", "rest", "none");
+        
+        this.strength += 3; // Regain 3 strength
+        this.food -= 1;     // Still get hungry
+        this.water -= 1;    // Still get thirsty
+        
+        Log.info("Player rested. Stats updated - Food: " + food + ", Water: " + water + ", Strength: " + strength);
+        Log.methodEnd("Player", "rest", "void");
     }
 
     public void collectItem(Item item){

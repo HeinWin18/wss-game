@@ -37,13 +37,13 @@ public class GameManager {
             try {
                 // 1. Check lose Condtion
                 if(!player.isAlive()) {
-                    Log.info("Player has lost the game.");
+                    System.out.println("Player has lost the game.");
                     break;
                 }
 
                 // 2. Check win Condition
                 if(player.hasReachedEast(map)){
-                    Log.info("Player has won the game!");
+                    System.out.println("Player has won the game!");
                     break;
                 }
 
@@ -67,7 +67,7 @@ public class GameManager {
                 Terrain currentTerrain = currentSquare.getTerrain();
                 if (currentTerrain != null){
                     currentTerrain.applyEffect(player); // This will modify the player's stats based on the terrain type
-                    Log.info("Stepped on " + currentTerrain.getClass().getSimpleName() + ", applied effect.");
+                    Log.info("[LOG] Stepped on " + currentTerrain.getClass().getSimpleName() + ", applied effect.");
                 }
 
                 //Check for and Collect Items
@@ -75,10 +75,22 @@ public class GameManager {
                     Item item  = currentSquare.getItem();
                     //need to add collectItem(Item i) to the player class
                     player.collectItem(item);
-                    Log.info("Collected item: " + item.getClass().getSimpleName() + "!");
+                    System.out.println("Collected item: " + item.getClass().getSimpleName() + "!");
 
                     // TODO: Remove item from the square after collection
                      //currentSquare.removeItem();
+                }
+
+                // --- WEEK 4 TRADING STUB ---
+                // Check if the square has a trader
+                if (currentSquare.hasTrader()) {
+                    System.out.println("Encountered a Trader on square (" + currentSquare.getX() + ", " + currentSquare.getY() + ")");
+                    
+                    // TODO (Friday): 
+                    // 1. Get the trader: Trader t = currentSquare.getTrader();
+                    // 2. Ask Brain for an Offer: Offer o = player.getBrain().makeOffer();
+                    // 3. Let Trader evaluate: boolean accepted = t.evaluateOffer(o);
+                    // 4. Update player stats if accepted.
                 }
 
                 //Get the square to prep for future terrain/trader/item interactions

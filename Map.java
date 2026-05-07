@@ -93,7 +93,7 @@ public class Map {
     private Item getRandomItem(Random rand) {
         int roll = rand.nextInt(100) + 1;
 
-        if (roll < 0) return null;
+        if (roll <= 70) return null;
         if (roll <= 85) return new FoodBonus(5);
         if (roll <= 95) return new WaterBonus(5);
         return new GoldBonus(5);
