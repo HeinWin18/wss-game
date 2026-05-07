@@ -73,13 +73,6 @@ public class Player {
         return move;
     }
 
-    // Returning map reference for Brain to use in Vision (Week 3 intergration)
-    // William
-    public Map getMap() {
-        // placeholder until we implement map reference in Player class
-        return null;
-    }
-
     // Player Turn Logic (We will uncomment this after merging William's AI branch)
     // public void nextTurn(Map map) {
     //     Path path = brain.makeMove();

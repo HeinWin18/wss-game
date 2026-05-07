@@ -17,8 +17,8 @@
 // }
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.IOException;
 
 public class Log {
     private static PrintWriter writer;
@@ -34,10 +34,6 @@ public class Log {
 
     public static void info(String message) {
         if (writer != null) writer.println("[INFO] " + message);
-    }
-
-    public static void question(String message){
-        if (writer != null) writer.println("[QUESTION] " + message);
     }
 
     public static void methodStart(String className, String methodName, String inputs){

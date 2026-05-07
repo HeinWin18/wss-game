@@ -14,7 +14,6 @@ public class Move {
         this.direction = direction;
         Log.methodEnd("Move", "Constructor", "void");
     }
-
     
     /**
      * Retrieves the direction string.
