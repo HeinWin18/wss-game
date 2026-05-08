@@ -159,6 +159,15 @@ public class Player {
 
         Log.info("Player stats reduced by - Food: " + foodCost + ", Water: " + waterCost + ", Strength: " + strengthCost);
     }
+    
+    /**
+     * Trader will call this to switch items around for a trade
+     */
+    public void recieveTrade(int food, int water, int gold) {
+    	this.food += food;
+    	this.water += water;
+    	this.gold += gold;
+    }
 
     /**
      * Skips a turn to regain strength, at the cost of food and water.
