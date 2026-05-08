@@ -7,6 +7,15 @@ public abstract class Brain {
 
     public Brain() {}
 
+    /**
+     * DUMMY METHOD (William needs to finish this this weekend!)
+     * Generates an offer when encountering a trader.
+     */
+    public Offer makeOffer(Trader trader) {
+        // For now, just return a terrible offer (Give 0, Request 1 Gold) so the game doesn't crash
+        return new Offer(0, 0, 0, 1, 0, 0); 
+    }
+
     // Kept your setters so GameManager doesn't break
     public void setPlayer(Player player) {
         this.player = player;
