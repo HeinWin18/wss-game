@@ -1,50 +1,49 @@
 // A patient trader will make counter offers until a deal is reached
 public class PatientTrader extends Trader {
-	
-	// constructor for Patient Trader
-	public PatientTrader() {
-		
-		// identifies this trader as a default trader
-		this.name = "Patient Trader";
-				
-		// generate a random inventory, between 0 and 5 of each: gold, food, water
-		this.gold = (int)(Math.random() * 6);
-		this.water = (int)(Math.random() * 6);
-		this.food = (int)(Math.random() * 6);
-	}
-	
-	/** evaluateOffer(Offer: offer): returns an offer object
-	* behavior: a patient trader will evaluate if a trade is fair
-	* if it is, return the same offer so that trade() can execute
-	* if it isn't create a new offer where isAcceptable() is true
-	*/
-	public Offer evaluateOffer(Offer offer) {
-		
-		if (offer.isAcceptable) {
-			return offer;
-		} else {
-			
-			// potential new player request values
-			int newGold;
-			int newWater;
-			int newFood;
-			
-			// reduce a player's requested items until an offer is fair i.e. isAcceptable is true
-			while (!offer.isAcceptable()) {
-				if (offer.getGoldRequest() > 0) {
-					newGold = offer.getGoldRequest() - 1;
-				} if (offer.getWaterRequest() > 0) {
-					newWater = offer.getWaterRequest() - 1;
-				} if (offer.getFoodRequest() > 0) {
-					newFood = offer.getFoodRequest() - 1;
-				}
-			}
-			
-			// create a new Offer object with the same player offer's but new request numbers
-			Offer newOffer = new Offer(offer.getGoldOffer(), offer.getWaterOffer(), offer.getFoodOffer(),
-										newGold, newWater, newFood);
-			
-			return newOffer;
-		}
-	}
+    
+    public PatientTrader() {
+        super(); // Calls base Trader constructor to generate inventory and logs
+        this.name = "Patient Trader";
+    }
+    
+    /** * evaluates if a trade is fair.
+     * If it isn't, creates a new offer where isAcceptable() is true.
+     */
+    public Offer evaluateOffer(Offer offer) {
+        Log.methodStart("PatientTrader", "evaluateOffer", "Offer");
+        
+        if (offer.isAcceptable()) {
+            Log.info("Patient Trader accepts the original offer.");
+            Log.methodEnd("PatientTrader", "evaluateOffer", "Offer");
+            return offer;
+        } else {
+            Log.info("Patient Trader finds offer unfair. Calculating counter-offer...");
+            
+            int newGold = offer.getGoldRequest();
+            int newWater = offer.getWaterRequest();
+            int newFood = offer.getFoodRequest();
+            
+            int offeredValue = (offer.getGoldOffer() * 3) + offer.getWaterOffer() + offer.getFoodOffer();
+            
+            // Reduce a player's requested items until the math balances out
+            while (offeredValue < ((newGold * 3) + newWater + newFood)) {
+                if (newGold > 0) {
+                    newGold--;
+                } else if (newWater > 0) {
+                    newWater--;
+                } else if (newFood > 0) {
+                    newFood--;
+                } else {
+                    break; // Safety net to prevent infinite loops
+                }
+            }
+            
+            Offer counterOffer = new Offer(offer.getGoldOffer(), offer.getWaterOffer(), offer.getFoodOffer(),
+                                        newGold, newWater, newFood);
+            
+            Log.info("Patient Trader proposes a counter-offer.");
+            Log.methodEnd("PatientTrader", "evaluateOffer", "Offer");
+            return counterOffer;
+        }
+    }
 }

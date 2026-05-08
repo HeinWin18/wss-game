@@ -1,28 +1,25 @@
-// an impatient trader will only evaluate 1 deal, and accept or reject it
-public class ImpatientTrader extends Trader{
+// An impatient trader will only evaluate 1 deal, and accept or reject it
+public class ImpatientTrader extends Trader {
 
-	// constructor for Impatient Trader
-		public ImpatientTrader() {
-			
-			// identifies this trader as a default trader
-			this.name = "Impatient Trader";
-					
-			// generate a random inventory, between 0 and 5 of each: gold, food, water
-			this.gold = (int)(Math.random() * 6);
-			this.water = (int)(Math.random() * 6);
-			this.food = (int)(Math.random() * 6);
-		}
-		
-		/** evaluateOffer(Offer: offer): returns an offer object
-		* behavior: if the player's offer is fair, accept it
-		* otherwise reject it
-		* if the trader likes the offer, it will return the offer, letting trade() know to execute said trade
-		* if the trader doesn't like the offer, do nothing 
-		*/
-		public Offer evaluateOffer(Offer offer) {
-			
-			if (offer.isAcceptable()) {
-				return offer;
-			}
-		}
+    public ImpatientTrader() {
+        super(); // Calls base Trader constructor to generate inventory and logs
+        this.name = "Impatient Trader";
+    }
+        
+    /** * If the player's offer is fair, accept it.
+     * Otherwise reject it completely.
+     */
+    public Offer evaluateOffer(Offer offer) {
+        Log.methodStart("ImpatientTrader", "evaluateOffer", "Offer");
+        
+        if (offer.isAcceptable()) {
+            Log.info("Impatient Trader accepts the offer.");
+            Log.methodEnd("ImpatientTrader", "evaluateOffer", "Offer");
+            return offer;
+        } else {
+            Log.info("Impatient Trader rejects the offer and refuses to negotiate.");
+            Log.methodEnd("ImpatientTrader", "evaluateOffer", "null");
+            return null; // Must return null if rejected so the compiler doesn't throw an error
+        }
+    }
 }
