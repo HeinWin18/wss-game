@@ -1,10 +1,11 @@
 [METHOD START] GameManager.initialize called with inputs: none
 [METHOD START] Map.Constructor called with inputs: 20, 20, 1
 [METHOD END] Map.Constructor returned: void
+[METHOD START] Player.Constructor called with inputs: Week 3 Full
+[METHOD END] Player.Constructor returned: void
 [METHOD START] Player.Constructor called with inputs: none
 [METHOD END] Player.Constructor returned: void
 [METHOD START] Map.populate called with inputs: none
-[INFO] Map populate placeholder called. (Waiting on Map team for real item generation)
 [METHOD END] Map.populate returned: void
 [METHOD END] GameManager.initialize returned: void
 [METHOD START] GameManager.run called with inputs: none
@@ -15,44 +16,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 1, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 1
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(1, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 1, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 1
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(1, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -68,8 +41,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(2, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
+[INFO] [LOG] Stepped on Plains, applied effect.
 [METHOD START] Map.getSquare called with inputs: 2, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 2
@@ -83,44 +56,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 3, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 3
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(3, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 3, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 3
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(3, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -136,8 +81,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(4, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 4, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 4
@@ -151,44 +96,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 5, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 5
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(5, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 5, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 5
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(5, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -204,8 +121,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(6, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
+[INFO] [LOG] Stepped on Swamp, applied effect.
 [METHOD START] Map.getSquare called with inputs: 6, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 6
@@ -219,44 +136,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 7, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 7
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(7, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 7, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 7
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(7, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -272,8 +161,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(8, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
+[INFO] [LOG] Stepped on Swamp, applied effect.
 [METHOD START] Map.getSquare called with inputs: 8, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 8
@@ -287,44 +176,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 9, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 9
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(9, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 9, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 9
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(9, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -340,8 +201,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(10, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
+[INFO] [LOG] Stepped on Plains, applied effect.
 [METHOD START] Map.getSquare called with inputs: 10, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 10
@@ -355,44 +216,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 11, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 11
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(11, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 11, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 11
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(11, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -408,8 +241,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(12, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 12, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 12
@@ -423,44 +256,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 13, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 13
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(13, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 13, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 13
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(13, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -476,8 +281,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(14, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 14, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 14
@@ -491,44 +296,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 15, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 15
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(15, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 15, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 15
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(15, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -544,8 +321,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(16, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 16, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 16
@@ -559,44 +336,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
-[INFO] Move chosen: EAST
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD START] Player.move called with inputs: Move(EAST)
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 17, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 17
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(17, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 17, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 17
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(17, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
-[METHOD START] Move.Constructor called with inputs: EAST
-[METHOD END] Move.Constructor returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -612,8 +361,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(18, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
+[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
+[INFO] [LOG] Stepped on Plains, applied effect.
 [METHOD START] Map.getSquare called with inputs: 18, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 18
@@ -627,10 +376,16 @@
 [METHOD END] Map.getCols returned: 20
 [METHOD END] Player.hasReachedEast returned: false
 [METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Aggressively pushing East.
-[METHOD END] AggressiveBrain.makeMove returned: Move(EAST)
 [METHOD START] Move.Constructor called with inputs: EAST
 [METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: EAST
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: EAST
+[METHOD START] Player.move called with inputs: Move(EAST)
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: EAST
+[METHOD END] Player.move returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [INFO] Move chosen: EAST
@@ -640,25 +395,7 @@
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: EAST
 [METHOD END] Player.move returned: void
-[METHOD START] Map.getSquare called with inputs: 19, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 19
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(19, 0)
-[INFO] Player stats reduced by - Food: 0, Water: 0, Strength: 0
-[INFO] Stepped on Terrain, applied effect.
-[METHOD START] Map.getSquare called with inputs: 19, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 19
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(19, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: true
-[INFO] Player has won the game!
+[METHOD START] Map.getSquare called with inputs: 20, 0
+[METHOD END] Map.getSquare returned: null (Out of bounds)
+[ERROR] Error occurred: Cannot invoke "Square.getTerrain()" because "<local3>" is null
 [METHOD END] GameManager.run returned: void

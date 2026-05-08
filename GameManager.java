@@ -49,6 +49,20 @@ public class GameManager {
 
                 //3. Brain selects the next move
                 Move move = player.getBrain().makeMove();
+                String direction = move.getDirection();
+
+                // Check if the AI decided to rest
+                if (direction.equals("REST")) {
+                    player.rest();
+                    System.out.println("Player skipped movement to rest.");
+                    // Do NOT apply terrain damage since they didn't move!
+                } 
+                else {
+                    // Normal movement logic goes here
+                    player.move(move);
+                    
+                    // Process the new square, terrain damage, and items...
+                }
 
                 if(move == null) {
                     throw new IllegalStateException("Move is null");
