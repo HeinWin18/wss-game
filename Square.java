@@ -5,7 +5,7 @@ public class Square {
 
     private Terrain terrain;
     private Item item;
-    // private Trader trader;
+    private Trader trader;
     private int x;
     private int y;
 
@@ -51,6 +51,10 @@ public class Square {
         return item;
     }
 
+    public Trader getTrader() {
+        return trader;
+    }
+
     // Returns true if this square has an item
     public boolean hasItem() {
         return item != null;
@@ -59,6 +63,11 @@ public class Square {
     // Removes the item from the square after the player collects it
     public void removeItem() {
         this.item = null;
+    }
+
+    // Returns true if this square has a trader
+    public boolean hasTrader() {
+        return trader != null;
     }
 
     // Setter methods - used by Map.populate()
@@ -70,10 +79,7 @@ public class Square {
         this.item = i;
     }
 
-    public boolean hasTrader() { 
-        return false; // Tells Vision there are no traders yet
+    public void setTrader(Trader t) {
+        this.trader = t;
     }
-    
-    // Stubbed - to be implemented when Trader is ready
-    // public Trader getTrader() { return trader; }
 }

@@ -89,18 +89,56 @@ public class Map {
         }
     }
 
-    // Picks a random Item, or returns null (70% chance of no item)
+    // Picks a random Item, or returns null (35% chance of no item).
+    // 50/50 chance of FoodBonus or WaterBonus if roll is between 36-95.
+    // GoldBonus if roll is above 95.
     private Item getRandomItem(Random rand) {
         int roll = rand.nextInt(100) + 1;
 
-        if (roll <= 70) return null;
-        if (roll <= 85) return new FoodBonus(5);
-        if (roll <= 95) return new WaterBonus(5);
+        if (roll <= 35) return null;
+
+        if (roll <= 95) {
+            // 50/50 chance of FoodBonus or WaterBonus
+            if (rand.nextInt(2) == 0) return new FoodBonus(5);
+            else return new WaterBonus(5);
+        }
+
         return new GoldBonus(5);
     }
 
+    // Randomly places a Trader on a square based on difficulty.
+    // Easy: 20% chance, Medium: 15% chance, Hard: 10% chance.
+    // Trader type split by difficulty:
+    // Easy: 70% PatientTrader, 30% ImpatientTrader
+    // Medium: 50% PatientTrader, 50% ImpatientTrader
+    // Hard: 40% PatientTrader, 60% ImpatientTrader
+    private Trader getRandomTrader(Random rand) {
+        int spawnRoll = rand.nextInt(100) + 1;
+        int typeRoll = rand.nextInt(100) + 1;
+
+        // Easy
+        if (difficulty == 1 && spawnRoll <= 20) {
+            if (typeRoll <= 70) return new PatientTrader();
+            else return new ImpatientTrader();
+        }
+
+        // Medium
+        if (difficulty == 2 && spawnRoll <= 15) {
+            if (typeRoll <= 50) return new PatientTrader();
+            else return new ImpatientTrader();
+        }
+
+        // Hard
+        if (difficulty == 3 && spawnRoll <= 10) {
+            if (typeRoll <= 40) return new PatientTrader();
+            else return new ImpatientTrader();
+        }
+
+        return null;
+    }
+
     /**
-     * Populates the map with terrain and items.
+     * Populates the map with terrain, items, and traders.
      */
     public void populate() {
         Log.methodStart("Map", "populate", "none");
@@ -111,12 +149,13 @@ public class Map {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 
-                // Starting square - safe Plains, no item
+                // Starting square - safe Plains, no item or trader
                 if (i == 0 && j == startY) {
                     grid[i][j].setTerrain(new Plains());
                 } else {
                     grid[i][j].setTerrain(getRandomTerrain(rand));
                     grid[i][j].setItem(getRandomItem(rand));
+                    grid[i][j].setTrader(getRandomTrader(rand));
                 }
             }
         }
