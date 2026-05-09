@@ -26,6 +26,24 @@ public class Trader {
     public String getInventory() {
         return name + " has " + this.gold + " gold, " + this.food + " food, and " + this.water + " water.";
     }
+
+    /**
+     * Default evaluation: Accept if fair, reject if not.
+     * (Patient and Impatient traders will override this with their own logic)
+     */
+    public Offer evaluateOffer(Offer offer) {
+        Log.methodStart("Trader", "evaluateOffer", "Offer");
+        
+        if (offer.isAcceptable()) {
+            Log.info("Default Trader accepts the offer.");
+            Log.methodEnd("Trader", "evaluateOffer", "Offer");
+            return offer; // Deal is good!
+        } else {
+            Log.info("Default Trader rejects the offer.");
+            Log.methodEnd("Trader", "evaluateOffer", "null");
+            return null;  // Deal is bad!
+        }
+    }
     
     // Evaluates offers and executes trade if fair and inventory allows
     public void trade(Player player, Offer offer) {
