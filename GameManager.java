@@ -17,6 +17,7 @@ public class GameManager {
         
         map = new Map(20, 20 , 1);
         player = new Player();
+        player.setMap(map); // Give the player access to the map for Vision and movement
         map.populate();
 
         // check for errors
@@ -70,6 +71,10 @@ public class GameManager {
                     // Get the exact square the player landed on
                     Square currentSquare = map.getSquare(player.getX(), player.getY());
 
+                    if (currentSquare == null) {
+                        Log.info("[WARN] Player moved out of bounds, resetting position.");
+                        break;
+                    }
                     // Apply terrain costs
                     Terrain currentTerrain = currentSquare.getTerrain();
                     if (currentTerrain != null){
@@ -97,12 +102,16 @@ public class GameManager {
                         
                         if (playerOffer != null) {
                             System.out.println("Player proposes a trade.");
+                            playerOffer.printOffer();
                             
                             // 2. Trader evaluates. (PatientTraders might counter-offer, ImpatientTraders return null if they hate it)
                             Offer finalOffer = trader.evaluateOffer(playerOffer);
                             
                             if (finalOffer != null) {
                                 // 3 & 4. Execute the trade and update stats automatically!
+                                System.out.println("Final negotiated trade:");
+                                finalOffer.printOffer(); // <-- ADD THIS!
+                                
                                 trader.trade(player, finalOffer);
                                 System.out.println("Trade successfully executed!");
                             } else {

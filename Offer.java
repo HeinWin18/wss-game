@@ -50,7 +50,7 @@ public class Offer {
     public int getFoodRequest() { return foodRequest; }
 
     public void printOffer() {
-        Log.info("Offer: Give [" + goldOffer + " Gold, " + waterOffer + " Water, " + foodOffer + " Food]");
-        Log.info("       Get  [" + goldRequest + " Gold, " + waterRequest + " Water, " + foodRequest + " Food]");
+        System.out.println("Offer: Give [" + goldOffer + " Gold, " + waterOffer + " Water, " + foodOffer + " Food]");
+        System.out.println("       Get  [" + goldRequest + " Gold, " + waterRequest + " Water, " + foodRequest + " Food]");
     }
 }

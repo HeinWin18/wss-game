@@ -187,25 +187,64 @@ public abstract class Vision {
         return null;
     }
 
-    // Loops through all visible directions, compares terrain strength costs,
-    // and returns a Path to the square with the lowest movement cost.
-    public Path easiestPath() {
-        Square easiest = null;
-        String easiestDir = null;
-        int lowestCost = Integer.MAX_VALUE;
-        for (String dir : visibleDirections) {
-            Square s = getNeighbor(dir);
-            if (s != null && s.getTerrain().getStrengthCost() < lowestCost) {
-                lowestCost = s.getTerrain().getStrengthCost();
-                easiest = s;
-                easiestDir = dir;
-            }
-        }
-        if (easiest != null) {
+    //Move to east -- main goal
+    // In Vision.java
+    public Path eastPath() {
+        Square s = getNeighbor("E");
+        if (s != null) {
             Path p = new Path();
-            p.addMove(new Move(easiestDir));
+            p.addMove(new Move("E"));
             return p;
         }
         return null;
     }
+
+    public Path easiestPath() {
+    Square easiest = null;
+    String easiestDir = null;
+    int lowestCost = Integer.MAX_VALUE;
+
+    for (String dir : visibleDirections) {
+        Square s = getNeighbor(dir);
+        if (s != null && s.getTerrain() != null && s.getTerrain().getStrengthCost() < lowestCost) {  // <-- only change
+            lowestCost = s.getTerrain().getStrengthCost();
+            easiest = s;
+            easiestDir = dir;
+        }
+    }
+
+    if (easiest != null) {
+        Path p = new Path();
+        p.addMove(new Move(easiestDir));
+        return p;
+    }
+    return null;
+    }
+
+    // Loops through all visible directions, compares terrain strength costs,
+    // and returns a Path to the square with the lowest movement cost.
+    // public Path easiestPath() {
+    //     Square easiest = null;
+    //     String easiestDir = null;
+    //     int lowestCost = Integer.MAX_VALUE;
+    //     for (String dir : visibleDirections) {
+    //         Square s = getNeighbor(dir);
+    //         // if (s != null && s.getTerrain().getStrengthCost() < lowestCost) {
+    //         //     lowestCost = s.getTerrain().getStrengthCost();
+    //         //     easiest = s;
+    //         //     easiestDir = dir;
+    //         // }
+    //         if (s != null && s.getTerrain() != null && s.getTerrain().getStrengthCost() < lowestCost) {
+    //             lowestCost = s.getTerrain().getStrengthCost();
+    //             easiest = s;
+    //             easiestDir = dir;
+    //         }
+    //     }
+    //     if (easiest != null) {
+    //         Path p = new Path();
+    //         p.addMove(new Move(easiestDir));
+    //         return p;
+    //     }
+    //     return null;
+    // }
 }

@@ -58,7 +58,7 @@ public class Player {
         this.food = 100;
         this.water = 100;
         this.strength = 100;
-        this.gold = 0;
+        this.gold = 100;
 
         this.brain = brain;
         this.vision = vision;
@@ -101,16 +101,16 @@ public class Player {
         String dir = m.getDirection();
 
         switch (dir) {
-            case "N": y++; break;
-            case "S": y--; break;
+            case "N": y--; break;
+            case "S": y++; break;
             case "E": 
             case "EAST": 
                 x++; break;
             case "W": x--; break;
-            case "NE": y++; x++; break;
-            case "NW": y++; x--; break;
-            case "SE": y--; x++; break;
-            case "SW": y--; x--; break;
+            case "NE": y--; x++; break;
+            case "NW": y--; x--; break;
+            case "SE": y++; x++; break;
+            case "SW": y++; x--; break;
         }
         
         Log.methodEnd("Player", "move", "void");
@@ -127,14 +127,14 @@ public class Player {
             int newY = y;
             
             switch (m.getDirection()) {
-                case "N": newY++; break;
-                case "S": newY--; break;
+                case "N": newY--; break;
+                case "S": newY++; break;
                 case "E": newX++; break;
                 case "W": newX--; break;
-                case "NE": newY++; newX++; break;
-                case "NW": newY++; newX--; break;
-                case "SE": newY--; newX++; break;
-                case "SW": newY--; newX--; break;
+                case "NE": newY--; newX++; break;
+                case "NW": newY--; newX--; break;
+                case "SE": newY++; newX++; break;
+                case "SW": newY++; newX--; break;
             }
 
             // Update player position 
@@ -225,6 +225,7 @@ public class Player {
     public int getFood() { return food; }
     public int getWater() { return water; }
     public int getStrength() { return strength; }
+    public int getGold() { return gold; }
     public Brain getBrain() { return brain; }
 
     /**
