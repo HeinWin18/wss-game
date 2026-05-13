@@ -216,7 +216,7 @@ class BalancedBrain extends Brain {
             path = new Path();
             path.addMove(new Move("E"));
     }
-        Log.methodEnd("AggressiveBrain", "makeMove", "Move");
+        Log.methodEnd("BalancedBrain", "makeMove", "Move");
         return getFirstMove(path, currentVision);
     }
 }
