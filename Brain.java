@@ -159,9 +159,11 @@ class AggressiveBrain extends Brain {
                 path = currentVision.closestGold();   
             }
         } else {
-            path = null; // no resource-based path found
-        }
-        
+            // No resource crisis — just push East
+            Log.info("Resources stable. Moving East.");
+            path = new Path();
+            path.addMove(new Move("E"));
+    }
         Log.methodEnd("AggressiveBrain", "makeMove", "Move");
         return getFirstMove(path, currentVision);
     }
@@ -209,10 +211,12 @@ class BalancedBrain extends Brain {
                 path = currentVision.closestGold();   
             }
         } else {
-            path = null; // no resource-based path found
-        }
-        
-        Log.methodEnd("BalancedBrain", "makeMove", "Move");
+            // No resource crisis — just push East
+            Log.info("Resources stable. Moving East.");
+            path = new Path();
+            path.addMove(new Move("E"));
+    }
+        Log.methodEnd("AggressiveBrain", "makeMove", "Move");
         return getFirstMove(path, currentVision);
     }
 }
