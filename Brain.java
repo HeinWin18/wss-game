@@ -25,15 +25,16 @@ public abstract class Brain {
                 return fallback.getMoves().get(0);
             }
         }
+        // If no path is found, rest instead of defaulting to East.
         return new Move("REST");
     }
-     
+
     public abstract Move makeMove();
 
     // William's Trade Logic (Math Fixed!)
     public Offer makeOffer(Trader trader) {
         Log.methodStart("Brain", "makeOffer", "Trader");
-        
+
         if (player == null) {
             Log.methodEnd("Brain", "makeOffer", "Offer");
             return new Offer(0, 0, 0, 0, 0, 0);
@@ -69,11 +70,11 @@ public abstract class Brain {
         else if (gold <= 3) {
             goldRequest = 1;
             if (food > water && food > 18) {
-                foodOffer = 3; // FIX: 3 food equals 1 gold
+                foodOffer = 3; // 3 food equals 1 gold
             } else if (water > 18) {
-                waterOffer = 3; // FIX: 3 water equals 1 gold
+                waterOffer = 3; // 3 water equals 1 gold
             } else if (food > 12) {
-                foodOffer = 3; 
+                foodOffer = 3;
             } else if (water > 12) {
                 waterOffer = 3;
             }
@@ -105,11 +106,11 @@ public abstract class Brain {
 
         if (foodRequest > 0 && gold >= 1) {
             Log.methodEnd("Brain", "makeOffer", "Offer");
-            return new Offer(1, 0, 0, 0, 0, 3); // FIX: 1 gold for 3 food
+            return new Offer(1, 0, 0, 0, 0, 3); // 1 gold for 3 food
         }
         if (waterRequest > 0 && gold >= 1) {
             Log.methodEnd("Brain", "makeOffer", "Offer");
-            return new Offer(1, 0, 0, 0, 3, 0); // FIX: 1 gold for 3 water
+            return new Offer(1, 0, 0, 0, 3, 0); // 1 gold for 3 water
         }
 
         Log.methodEnd("Brain", "makeOffer", "Offer");
@@ -117,74 +118,99 @@ public abstract class Brain {
     }
 }
 
+/**
+ * AggressiveBrain prioritizes moving East, only diverts when critically low on stats.
+ */
 class AggressiveBrain extends Brain {
-    public AggressiveBrain() { super(); }
+
+    public AggressiveBrain() {
+        super();
+    }
 
     @Override
     public Move makeMove() {
         Log.methodStart("AggressiveBrain", "makeMove", "none");
+
         Path path = null;
+
         if (player == null || player.getMap() == null) return new Move("REST");
 
-        Map map = player.getMap(); 
-        Vision currentVision = new CautiousVision(map, player.getX(), player.getY());
+        Map map = player.getMap();
+        Vision currentVision = (this.vision != null) ? this.vision
+                : new CautiousVision(map, player.getX(), player.getY());
 
         boolean foodCritical = player.getFood() <= 2;
         boolean waterCritical = player.getWater() <= 2;
         boolean strengthCritical = player.getStrength() <= 2;
 
-        if (foodCritical) { Log.info("Resources critical. Relying on Vision."); path = currentVision.closestFood(); }
-        else if (waterCritical) { Log.info("Resources critical. Relying on Vision."); path = currentVision.closestWater(); }
-        else if (strengthCritical) { Log.info("Resources critical. Relying on Vision."); path = currentVision.closestGold(); }
+        if (foodCritical || waterCritical || strengthCritical) {
+            Log.info("Resources critical. Relying on Vision.");
+            if (foodCritical) {
+                Log.info("Food critically low (<= 2)");
+                path = currentVision.closestFood();
+            } else if (waterCritical) {
+                Log.info("Water critically low (<= 2)");
+                path = currentVision.closestWater();
+            } else if (strengthCritical) {
+                Log.info("Strength/Gold critically low (<= 2)");
+                path = currentVision.closestGold();
+            }
+        } else {
+            // No resource crisis — just push East
+            Log.info("Resources stable. Moving East.");
+            path = new Path();
+            path.addMove(new Move("E"));
+        }
 
         Log.methodEnd("AggressiveBrain", "makeMove", "Move");
         return getFirstMove(path, currentVision);
     }
 }
 
+/**
+ * BalancedBrain reacts earlier (<= 5) and evaluates needs more carefully.
+ */
 class BalancedBrain extends Brain {
-    public BalancedBrain() { super(); }
 
-    // @Override
-    // public Move makeMove() {
-    //     Log.methodStart("BalancedBrain", "makeMove", "none");
-    //     Path path = null;
-    //     if (player == null || player.getMap() == null) return new Move("REST");
-
-    //     Map map = player.getMap(); 
-    //     Vision currentVision = new CautiousVision(map, player.getX(), player.getY());
-
-    //     boolean foodCritical = player.getFood() <= 5;
-    //     boolean waterCritical = player.getWater() <= 5;
-    //     boolean strengthCritical = player.getStrength() <= 5;
-
-    //     if (foodCritical || waterCritical || strengthCritical) {
-    //         if (foodCritical) path = currentVision.closestFood();
-    //         else if (waterCritical) path = currentVision.closestWater();
-    //         else if (strengthCritical) path = currentVision.closestGold();   
-    //     } 
-        
-    //     Log.methodEnd("BalancedBrain", "makeMove", "Move");
-    //     return getFirstMove(path, currentVision);
-    // }
+    public BalancedBrain() {
+        super();
+    }
 
     @Override
     public Move makeMove() {
         Log.methodStart("BalancedBrain", "makeMove", "none");
+        Log.info("Evaluating needs through Vision to determine best balanced move.");
+
         Path path = null;
+
         if (player == null || player.getMap() == null) return new Move("REST");
 
-        Map map = player.getMap(); 
-        Vision currentVision = new CautiousVision(map, player.getX(), player.getY());
+        Map map = player.getMap();
+        Vision currentVision = (this.vision != null) ? this.vision
+                : new CautiousVision(map, player.getX(), player.getY());
 
         boolean foodCritical = player.getFood() <= 5;
         boolean waterCritical = player.getWater() <= 5;
         boolean strengthCritical = player.getStrength() <= 5;
 
-        if (foodCritical) path = currentVision.closestFood();
-        else if (waterCritical) path = currentVision.closestWater();
-        else if (strengthCritical) path = currentVision.closestGold();
-            
+        if (foodCritical || waterCritical || strengthCritical) {
+            if (foodCritical) {
+                Log.info("Food low (<= 5)");
+                path = currentVision.closestFood();
+            } else if (waterCritical) {
+                Log.info("Water low (<= 5)");
+                path = currentVision.closestWater();
+            } else if (strengthCritical) {
+                Log.info("Strength/Gold low (<= 5)");
+                path = currentVision.closestGold();
+            }
+        } else {
+            // No resource crisis — just push East
+            Log.info("Resources stable. Moving East.");
+            path = new Path();
+            path.addMove(new Move("E"));
+        }
+
         Log.methodEnd("BalancedBrain", "makeMove", "Move");
         return getFirstMove(path, currentVision);
     }

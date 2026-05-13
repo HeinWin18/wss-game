@@ -12,11 +12,11 @@ public class GameManager {
      * Inputs: None
      * Outputs: None
      */
-    public void initialize() {
+    public void initialize(int width, int height, int difficulty, int visionChoice, int brainChoice) {
         Log.methodStart("GameManager", "initialize", "none");
-        
-        map = new Map(20, 20 , 1);
-        player = new Player();
+
+        map = new Map(width, height, difficulty);
+        player = new Player(visionChoice, brainChoice);
         player.setMap(map); // Give the player access to the map for Vision and movement
         map.populate();
 

@@ -1,3 +1,244 @@
+// /**
+//  * Represents the player navigating the map.
+//  */
+// public class Player {
+
+//     // Position (Kept public to not break Week 1 GameManager MVP)
+//     public int x = 0;
+//     public int y = 0;
+
+//     // Stats
+//     private int food;
+//     private int water;
+//     private int strength;
+//     private int gold; 
+//     private Map map;
+
+//     public void setMap(Map m) {
+//         this.map = m;
+//     }
+
+//     public Map getMap(){
+//         return this.map;
+//     }
+
+//     // References
+//     private Brain brain = new AggressiveBrain(); // Default to AggressiveBrain for Week 1 MVP
+//     private Vision vision;
+
+//     /**
+//      * Default constructor for Week 1 MVP.
+//      */
+    
+//     public Player() {
+//         // Calls the Week 3 constructor with default values
+//         this(0, 0, new AggressiveBrain(), null); 
+//         Log.methodStart("Player", "Constructor", "none");
+//         Log.methodEnd("Player", "Constructor", "void");
+//     }
+
+//     /**
+//      * Constructor with starting coordinates (Week 1 MVP).
+//      */
+//     public Player(int startX, int startY) {
+//         // Calls the Week 3 constructor with custom coordinates but default brain
+//         this(startX, startY, new AggressiveBrain(), null);
+//         Log.methodStart("Player", "Constructor", startX + ", " + startY);
+//         Log.methodEnd("Player", "Constructor", "void");
+//     }
+
+//     /**
+//      * Constructor for Week 3 integration. (The Master Constructor)
+//      */
+//     public Player(int startX, int startY, Brain brain, Vision vision) {
+//         Log.methodStart("Player", "Constructor", "Week 3 Full");
+//         this.x = startX;
+//         this.y = startY;
+
+//         this.food = 100;
+//         this.water = 100;
+//         this.strength = 100;
+//         this.gold = 100;
+
+//         this.brain = brain;
+//         this.vision = vision;
+        
+//         // CRITICAL FIX: Link the brain to the player!
+//         if (this.brain != null) {
+//             this.brain.setPlayer(this);
+//         }
+        
+//         Log.methodEnd("Player", "Constructor", "void");
+//     }
+
+//     /**
+//      * Generates the next move for the player (Week 1 MVP).
+//      */
+//     public Move makeMove() { 
+//         Log.methodStart("Player", "makeMove", "none");
+//         Log.info("TEST MOVE");
+        
+//         Move move = new Move("EAST");
+        
+//         Log.methodEnd("Player", "makeMove", "Move(" + move.getDirection() + ")");
+//         return move;
+//     }
+
+//     // Player Turn Logic (We will uncomment this after merging William's AI branch)
+//     // public void nextTurn(Map map) {
+//     //     Path path = brain.makeMove();
+
+//     //     if (path != null) {
+//     //         move(path); 
+//     //     }
+//     // }
+
+//     /**
+//      * Moves the player based on a single Move object.
+//      */
+//     public void move(Move m) {
+//         Log.methodStart("Player", "move", "Move(" + m.getDirection() + ")");
+//         String dir = m.getDirection();
+
+//         switch (dir) {
+//             case "N": y--; break;
+//             case "S": y++; break;
+//             case "E": 
+//             case "EAST": 
+//                 x++; break;
+//             case "W": x--; break;
+//             case "NE": y--; x++; break;
+//             case "NW": y--; x--; break;
+//             case "SE": y++; x++; break;
+//             case "SW": y++; x--; break;
+//         }
+        
+//         Log.methodEnd("Player", "move", "void");
+//     }
+
+//     /**
+//      * Moves the player along a Path.
+//      */
+//     public void move(Path path) {
+//         Log.methodStart("Player", "move", "Path");
+//         for (Move m : path.getMoves()) {
+            
+//             int newX = x;
+//             int newY = y;
+            
+//             switch (m.getDirection()) {
+//                 case "N": newY--; break;
+//                 case "S": newY++; break;
+//                 case "E": newX++; break;
+//                 case "W": newX--; break;
+//                 case "NE": newY--; newX++; break;
+//                 case "NW": newY--; newX--; break;
+//                 case "SE": newY++; newX++; break;
+//                 case "SW": newY++; newX--; break;
+//             }
+
+//             // Update player position 
+//             x = newX;
+//             y = newY;
+//         }
+//         Log.methodEnd("Player", "move", "void");
+//     }
+
+//     /**
+//      * Terrain will call this method to apply cost of moving.
+//      * Merged local and incoming logic to prevent negative stats.
+//      */
+//     public void reduceStats(int foodCost, int waterCost, int strengthCost) {
+//         this.food -= foodCost;
+//         this.water -= waterCost;
+//         this.strength -= strengthCost;
+
+//         if (food < 0) { food = 0; }
+//         if (water < 0) { water = 0; }
+//         if (strength < 0) { strength = 0; }
+
+//         Log.info("Player stats reduced by - Food: " + foodCost + ", Water: " + waterCost + ", Strength: " + strengthCost);
+//     }
+    
+//     /**
+//      * Trader will call this to switch items around for a trade
+//      */
+//     public void recieveTrade(int food, int water, int gold) {
+//     	this.food += food;
+//     	this.water += water;
+//     	this.gold += gold;
+//     }
+
+//     /**
+//      * Skips a turn to regain strength, at the cost of food and water.
+//      */
+//     public void rest() {
+//         Log.methodStart("Player", "rest", "none");
+        
+//         this.strength += 3; // Regain 3 strength
+//         this.food -= 1;     // Still get hungry
+//         this.water -= 1;    // Still get thirsty
+        
+//         Log.info("Player rested. Stats updated - Food: " + food + ", Water: " + water + ", Strength: " + strength);
+//         Log.methodEnd("Player", "rest", "void");
+//     }
+
+//     public void collectItem(Item item){
+//         item.collect(this);
+//     }
+
+//     public void addFood(int amount) {
+//         this.food += amount;
+//     }
+
+//     public void addWater(int amount) {
+//         this.water += amount;
+//     }
+
+//     public void addGold(int amount) {
+//         this.gold += amount;
+//     }
+
+//     /**
+//      * Checks if the player is still alive based on stats.
+//      */
+//     public boolean isAlive() {
+//         Log.methodStart("Player", "isAlive", "none");
+//         boolean alive = food > 0 && water > 0 && strength > 0;
+//         Log.methodEnd("Player", "isAlive", String.valueOf(alive));
+//         return alive;
+//     }
+
+//     /**
+//      * Checks if the player has reached the eastern edge of the map.
+//      */
+//     public boolean hasReachedEast(Map map) {
+//         Log.methodStart("Player", "hasReachedEast", "Map");
+//         boolean reached = x >= map.getCols() - 1;
+//         Log.methodEnd("Player", "hasReachedEast", String.valueOf(reached));
+//         return reached;
+//     }
+
+//     // Getters
+//     public int getX() { return x; }
+//     public int getY() { return y; }
+//     public int getFood() { return food; }
+//     public int getWater() { return water; }
+//     public int getStrength() { return strength; }
+//     public int getGold() { return gold; }
+//     public Brain getBrain() { return brain; }
+
+//     /**
+//      * Logs the current status of the player.
+//      */
+//     public void printStatus() {
+//         Log.methodStart("Player", "printStatus", "none");
+//         Log.info("Player Position: (" + x + ", " + y + ")");
+//         Log.info("Food: " + food + " Water: " + water + " Strength: " + strength);
+//         Log.methodEnd("Player", "printStatus", "void");
+//     }
+// }
+
 /**
  * Represents the player navigating the map.
  */
@@ -14,8 +255,14 @@ public class Player {
     private int gold; 
     private Map map;
 
+    private int visionChoice = 1; // at the top with other fields
+
     public void setMap(Map m) {
         this.map = m;
+        this.vision = createVision(visionChoice, m, x, y);
+        if (this.brain != null) {
+            this.brain.setVision(this.vision);
+        }
     }
 
     public Map getMap(){
@@ -40,10 +287,20 @@ public class Player {
     /**
      * Constructor with starting coordinates (Week 1 MVP).
      */
-    public Player(int startX, int startY) {
-        // Calls the Week 3 constructor with custom coordinates but default brain
-        this(startX, startY, new AggressiveBrain(), null);
-        Log.methodStart("Player", "Constructor", startX + ", " + startY);
+    // public Player(int startX, int startY) {
+    //     // Calls the Week 3 constructor with custom coordinates but default brain
+    //     this(startX, startY, new AggressiveBrain(), null);
+    //     Log.methodStart("Player", "Constructor", startX + ", " + startY);
+    //     Log.methodEnd("Player", "Constructor", "void");
+    // }
+
+    /**
+     * Constructor for main menu choices.
+     */
+    public Player(int visionChoice, int brainChoice) {
+        this(0, 0, createBrain(brainChoice), null); // null vision until setMap() is called
+        this.visionChoice = visionChoice;
+        Log.methodStart("Player", "Constructor", "visionChoice=" + visionChoice + ", brainChoice=" + brainChoice);
         Log.methodEnd("Player", "Constructor", "void");
     }
 
@@ -69,6 +326,28 @@ public class Player {
         }
         
         Log.methodEnd("Player", "Constructor", "void");
+    }
+
+    /**
+     * Creates a Brain based on the user's menu choice.
+     */
+    private static Brain createBrain(int choice) {
+        switch (choice) {
+            case 2: return new BalancedBrain();
+            default: return new AggressiveBrain();
+        }
+    }
+
+    /**
+     * Creates a Vision based on the user's menu choice.
+     */
+    private static Vision createVision(int choice, Map map, int x, int y) {
+        switch (choice) {
+            case 2: return new FarSightVision(map, x, y);
+            case 3: return new FocusedVision(map, x, y);
+            case 4: return new KeenEyedVision(map, x, y);
+            default: return new CautiousVision(map, x, y);
+        }
     }
 
     /**
@@ -188,12 +467,13 @@ public class Player {
     }
 
     public void addFood(int amount) {
-        this.food += amount;
+        this.food = Math.min(this.food + amount, 100);
     }
 
     public void addWater(int amount) {
-        this.water += amount;
+        this.water = Math.min(this.water + amount, 100);
     }
+
 
     public void addGold(int amount) {
         this.gold += amount;
