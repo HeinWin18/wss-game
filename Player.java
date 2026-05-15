@@ -312,10 +312,10 @@ public class Player {
         this.x = startX;
         this.y = startY;
 
-        this.food = 100;
-        this.water = 100;
-        this.strength = 100;
-        this.gold = 100;
+        this.food = 20;
+        this.water = 20;
+        this.strength = 20;
+        this.gold = 20;
 
         this.brain = brain;
         this.vision = vision;

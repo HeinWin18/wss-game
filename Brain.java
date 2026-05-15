@@ -152,8 +152,8 @@ class AggressiveBrain extends Brain {
                 Log.info("Water critically low (<= 2)");
                 path = currentVision.closestWater();
             } else if (strengthCritical) {
-                Log.info("Strength/Gold critically low (<= 2)");
-                path = currentVision.closestGold();
+                Log.info("Strength critically low (<= 2)");
+                return new Move("REST");
             }
         } else {
             // No resource crisis — just push East
@@ -202,7 +202,7 @@ class BalancedBrain extends Brain {
                 path = currentVision.closestWater();
             } else if (strengthCritical) {
                 Log.info("Strength/Gold low (<= 5)");
-                path = currentVision.closestGold();
+                return new Move("REST");
             }
         } else {
             // No resource crisis — just push East

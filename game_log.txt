@@ -1,276 +1,45 @@
 [METHOD START] GameManager.initialize called with inputs: none
-[METHOD START] Map.Constructor called with inputs: 20, 20, 1
+[METHOD START] Map.Constructor called with inputs: 10, 10, 3
 [METHOD END] Map.Constructor returned: void
 [METHOD START] Player.Constructor called with inputs: Week 3 Full
 [METHOD END] Player.Constructor returned: void
-[METHOD START] Player.Constructor called with inputs: visionChoice=4, brainChoice=1
+[METHOD START] Player.Constructor called with inputs: visionChoice=4, brainChoice=2
 [METHOD END] Player.Constructor returned: void
 [METHOD START] KeenEyedVision.Constructor called with inputs: Map, 0, 0
 [METHOD END] KeenEyedVision.Constructor returned: void
 [METHOD START] Map.populate called with inputs: none
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 0, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 4, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 2, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 5, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 4, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 4, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 3, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 4, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 5, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 0, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 4, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 0, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 1, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 2, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 5, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 0, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 3, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 0, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 3, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 4, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 1, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 5, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 3, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 1, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 5, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 2, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 4, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 4, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
 [INFO] Default Trader spawned with - Gold: 5, Water: 0, Food: 5
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 5, Food: 2
+[INFO] Default Trader spawned with - Gold: 0, Water: 2, Food: 1
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 2, Food: 0
+[INFO] Default Trader spawned with - Gold: 2, Water: 1, Food: 2
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 5, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 0, Food: 1
+[INFO] Default Trader spawned with - Gold: 3, Water: 3, Food: 0
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
 [INFO] Default Trader spawned with - Gold: 3, Water: 3, Food: 1
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 0, Food: 5
+[INFO] Default Trader spawned with - Gold: 3, Water: 1, Food: 3
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 4, Food: 2
+[INFO] Default Trader spawned with - Gold: 2, Water: 5, Food: 4
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 2, Food: 2
+[INFO] Default Trader spawned with - Gold: 5, Water: 1, Food: 0
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 0, Food: 1
+[INFO] Default Trader spawned with - Gold: 1, Water: 4, Food: 0
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 4, Food: 0
+[INFO] Default Trader spawned with - Gold: 4, Water: 4, Food: 1
 [METHOD END] Trader.Constructor returned: void
 [METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 4, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 1, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 0, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 5, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 3, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 1, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 0, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 5, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 2, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 0, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 3, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 3, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 2, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 2, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 3, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 0, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 4, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 3, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 2, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 5, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 1, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 1, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 2, Water: 4, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 5, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 3, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 1, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 1, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 5, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 2, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 5, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 1, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 0, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 2, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 4, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 4, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 0, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 3, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 1, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 5, Food: 1
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 3, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 1, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 2, Food: 5
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 4, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 0, Water: 3, Food: 4
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 1, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 5, Water: 4, Food: 2
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 3, Water: 5, Food: 3
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 1, Water: 2, Food: 0
-[METHOD END] Trader.Constructor returned: void
-[METHOD START] Trader.Constructor called with inputs: none
-[INFO] Default Trader spawned with - Gold: 4, Water: 3, Food: 0
+[INFO] Default Trader spawned with - Gold: 4, Water: 2, Food: 4
 [METHOD END] Trader.Constructor returned: void
 [METHOD END] Map.populate returned: void
 [METHOD END] GameManager.initialize returned: void
@@ -279,9 +48,10 @@
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -291,7 +61,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -306,6 +76,8 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
 [METHOD START] Map.getSquare called with inputs: 1, 0
 [METHOD START] Square.getX called with inputs: none
@@ -313,8 +85,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(1, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 1, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 1
@@ -325,9 +97,10 @@
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -337,7 +110,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -350,6 +123,8 @@
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
@@ -371,9 +146,10 @@
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -383,7 +159,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -398,6 +174,8 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
 [METHOD START] Map.getSquare called with inputs: 3, 0
 [METHOD START] Square.getX called with inputs: none
@@ -405,28 +183,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(3, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 3
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD START] Brain.makeOffer called with inputs: Trader
-[METHOD END] Brain.makeOffer returned: Offer
-[METHOD START] Offer.Constructor called with inputs: multiple ints
-[METHOD END] Offer.Constructor returned: void
-[METHOD START] ImpatientTrader.evaluateOffer called with inputs: Offer
-[METHOD START] Offer.isAcceptable called with inputs: none
-[INFO] Evaluating Trade Math: Offered Value (0) vs Requested Value (0)
-[METHOD END] Offer.isAcceptable returned: true
-[INFO] Impatient Trader accepts the offer.
-[METHOD END] ImpatientTrader.evaluateOffer returned: Offer
-[METHOD START] Trader.trade called with inputs: Player, Offer
-[METHOD START] Offer.isAcceptable called with inputs: none
-[INFO] Evaluating Trade Math: Offered Value (0) vs Requested Value (0)
-[METHOD END] Offer.isAcceptable returned: true
-[INFO] Trader accepted the offer!
-[METHOD END] Trader.trade returned: void
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 3, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 3
@@ -437,9 +195,10 @@
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -449,7 +208,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -462,6 +221,8 @@
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
@@ -471,8 +232,8 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(4, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
+[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
+[INFO] [LOG] Stepped on Forest, applied effect.
 [METHOD START] Map.getSquare called with inputs: 4, 0
 [METHOD START] Square.getX called with inputs: none
 [METHOD END] Square.getX returned: 4
@@ -483,9 +244,10 @@
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -495,7 +257,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -508,6 +270,8 @@
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
@@ -517,547 +281,22 @@
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
 [METHOD END] Map.getSquare returned: Square(5, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
-[INFO] [LOG] Stepped on Swamp, applied effect.
-[METHOD START] Map.getSquare called with inputs: 5, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 5
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(5, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 6, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 6
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(6, 0)
-[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
-[INFO] [LOG] Stepped on Forest, applied effect.
-[METHOD START] Map.getSquare called with inputs: 6, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 6
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(6, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 7, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 7
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(7, 0)
-[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
-[INFO] [LOG] Stepped on Forest, applied effect.
-[METHOD START] Map.getSquare called with inputs: 7, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 7
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(7, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 8, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 8
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(8, 0)
-[INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
-[INFO] [LOG] Stepped on Forest, applied effect.
-[METHOD START] Map.getSquare called with inputs: 8, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 8
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(8, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 9, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 9
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(9, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
-[INFO] [LOG] Stepped on Swamp, applied effect.
-[METHOD START] Map.getSquare called with inputs: 9, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 9
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(9, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 10, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 10
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(10, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 10, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 10
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(10, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 11, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 11
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(11, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
-[INFO] [LOG] Stepped on Swamp, applied effect.
-[METHOD START] Map.getSquare called with inputs: 11, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 11
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(11, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 12, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 12
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(12, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 12, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 12
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(12, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 13, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 13
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(13, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 13, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 13
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(13, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 14, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 14
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(14, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 14, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 14
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(14, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 15, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 15
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(15, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 15, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 15
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(15, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 16, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 16
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(16, 0)
 [INFO] Player stats reduced by - Food: 3, Water: 2, Strength: 4
 [INFO] [LOG] Stepped on Mountain, applied effect.
+[METHOD START] Map.getSquare called with inputs: 5, 0
 [METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 16
+[METHOD END] Square.getX returned: 5
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
-[METHOD START] Brain.makeOffer called with inputs: Trader
-[METHOD END] Brain.makeOffer returned: Offer
-[METHOD START] Offer.Constructor called with inputs: multiple ints
-[METHOD END] Offer.Constructor returned: void
-[METHOD START] ImpatientTrader.evaluateOffer called with inputs: Offer
-[METHOD START] Offer.isAcceptable called with inputs: none
-[INFO] Evaluating Trade Math: Offered Value (0) vs Requested Value (0)
-[METHOD END] Offer.isAcceptable returned: true
-[INFO] Impatient Trader accepts the offer.
-[METHOD END] ImpatientTrader.evaluateOffer returned: Offer
-[METHOD START] Trader.trade called with inputs: Player, Offer
-[METHOD START] Offer.isAcceptable called with inputs: none
-[INFO] Evaluating Trade Math: Offered Value (0) vs Requested Value (0)
-[METHOD END] Offer.isAcceptable returned: true
-[INFO] Trader accepted the offer!
-[METHOD END] Trader.trade returned: void
-[METHOD START] Map.getSquare called with inputs: 16, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 16
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(16, 0)
+[METHOD END] Map.getSquare returned: Square(5, 0)
 [METHOD START] Player.isAlive called with inputs: none
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
 [INFO] Resources stable. Moving East.
 [METHOD START] Path.Constructor called with inputs: none
 [METHOD END] Path.Constructor returned: void
@@ -1067,7 +306,7 @@
 [METHOD END] Move.getDirection returned: E
 [METHOD START] Path.addMove called with inputs: Move(E)
 [METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
+[METHOD END] BalancedBrain.makeMove returned: Move
 [METHOD START] Path.getMoves called with inputs: none
 [METHOD END] Path.getMoves returned: List<Move> size: 1
 [METHOD START] Path.getMoves called with inputs: none
@@ -1082,117 +321,206 @@
 [METHOD END] Player.move returned: void
 [METHOD START] Move.getDirection called with inputs: none
 [METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
 [INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 17, 0
+[METHOD START] Map.getSquare called with inputs: 6, 0
 [METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 17
+[METHOD END] Square.getX returned: 6
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(17, 0)
+[METHOD END] Map.getSquare returned: Square(6, 0)
+[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
+[INFO] [LOG] Stepped on Swamp, applied effect.
+[METHOD START] Map.getSquare called with inputs: 6, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 6
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(6, 0)
+[METHOD START] Player.isAlive called with inputs: none
+[METHOD END] Player.isAlive returned: true
+[METHOD START] Player.hasReachedEast called with inputs: Map
+[METHOD START] Map.getCols called with inputs: none
+[METHOD END] Map.getCols returned: 10
+[METHOD END] Player.hasReachedEast returned: false
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
+[INFO] Resources stable. Moving East.
+[METHOD START] Path.Constructor called with inputs: none
+[METHOD END] Path.Constructor returned: void
+[METHOD START] Move.Constructor called with inputs: E
+[METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Path.addMove called with inputs: Move(E)
+[METHOD END] Path.addMove returned: void
+[METHOD END] BalancedBrain.makeMove returned: Move
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Player.move called with inputs: Move(E)
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[INFO] Move chosen: E
+[METHOD START] Map.getSquare called with inputs: 7, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 7
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(7, 0)
+[INFO] Player stats reduced by - Food: 1, Water: 2, Strength: 3
+[INFO] [LOG] Stepped on Swamp, applied effect.
+[METHOD START] Map.getSquare called with inputs: 7, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 7
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(7, 0)
+[METHOD START] Player.isAlive called with inputs: none
+[METHOD END] Player.isAlive returned: true
+[METHOD START] Player.hasReachedEast called with inputs: Map
+[METHOD START] Map.getCols called with inputs: none
+[METHOD END] Map.getCols returned: 10
+[METHOD END] Player.hasReachedEast returned: false
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
+[INFO] Strength/Gold low (<= 5)
+[METHOD START] Move.Constructor called with inputs: REST
+[METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: REST
+[METHOD START] Player.rest called with inputs: none
+[INFO] Player rested. Stats updated - Food: 17, Water: 11, Strength: 6
+[METHOD END] Player.rest returned: void
+[METHOD START] Player.isAlive called with inputs: none
+[METHOD END] Player.isAlive returned: true
+[METHOD START] Player.hasReachedEast called with inputs: Map
+[METHOD START] Map.getCols called with inputs: none
+[METHOD END] Map.getCols returned: 10
+[METHOD END] Player.hasReachedEast returned: false
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
+[INFO] Resources stable. Moving East.
+[METHOD START] Path.Constructor called with inputs: none
+[METHOD END] Path.Constructor returned: void
+[METHOD START] Move.Constructor called with inputs: E
+[METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Path.addMove called with inputs: Move(E)
+[METHOD END] Path.addMove returned: void
+[METHOD END] BalancedBrain.makeMove returned: Move
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Player.move called with inputs: Move(E)
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[INFO] Move chosen: E
+[METHOD START] Map.getSquare called with inputs: 8, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 8
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(8, 0)
+[INFO] Player stats reduced by - Food: 1, Water: 4, Strength: 3
+[INFO] [LOG] Stepped on Desert, applied effect.
+[METHOD START] Map.getSquare called with inputs: 8, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 8
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(8, 0)
+[METHOD START] Player.isAlive called with inputs: none
+[METHOD END] Player.isAlive returned: true
+[METHOD START] Player.hasReachedEast called with inputs: Map
+[METHOD START] Map.getCols called with inputs: none
+[METHOD END] Map.getCols returned: 10
+[METHOD END] Player.hasReachedEast returned: false
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
+[INFO] Strength/Gold low (<= 5)
+[METHOD START] Move.Constructor called with inputs: REST
+[METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: REST
+[METHOD START] Player.rest called with inputs: none
+[INFO] Player rested. Stats updated - Food: 15, Water: 6, Strength: 6
+[METHOD END] Player.rest returned: void
+[METHOD START] Player.isAlive called with inputs: none
+[METHOD END] Player.isAlive returned: true
+[METHOD START] Player.hasReachedEast called with inputs: Map
+[METHOD START] Map.getCols called with inputs: none
+[METHOD END] Map.getCols returned: 10
+[METHOD END] Player.hasReachedEast returned: false
+[METHOD START] BalancedBrain.makeMove called with inputs: none
+[INFO] Evaluating needs through Vision to determine best balanced move.
+[INFO] Resources stable. Moving East.
+[METHOD START] Path.Constructor called with inputs: none
+[METHOD END] Path.Constructor returned: void
+[METHOD START] Move.Constructor called with inputs: E
+[METHOD END] Move.Constructor returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Path.addMove called with inputs: Move(E)
+[METHOD END] Path.addMove returned: void
+[METHOD END] BalancedBrain.makeMove returned: Move
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Path.getMoves called with inputs: none
+[METHOD END] Path.getMoves returned: List<Move> size: 1
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Player.move called with inputs: Move(E)
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD END] Player.move returned: void
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[METHOD START] Move.getDirection called with inputs: none
+[METHOD END] Move.getDirection returned: E
+[INFO] Move chosen: E
+[METHOD START] Map.getSquare called with inputs: 9, 0
+[METHOD START] Square.getX called with inputs: none
+[METHOD END] Square.getX returned: 9
+[METHOD START] Square.getY called with inputs: none
+[METHOD END] Square.getY returned: 0
+[METHOD END] Map.getSquare returned: Square(9, 0)
 [INFO] Player stats reduced by - Food: 2, Water: 2, Strength: 2
 [INFO] [LOG] Stepped on Forest, applied effect.
-[METHOD START] Map.getSquare called with inputs: 17, 0
+[METHOD START] Map.getSquare called with inputs: 9, 0
 [METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 17
+[METHOD END] Square.getX returned: 9
 [METHOD START] Square.getY called with inputs: none
 [METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(17, 0)
+[METHOD END] Map.getSquare returned: Square(9, 0)
 [METHOD START] Player.isAlive called with inputs: none
 [METHOD END] Player.isAlive returned: true
 [METHOD START] Player.hasReachedEast called with inputs: Map
 [METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 18, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 18
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(18, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 18, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 18
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(18, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
-[METHOD END] Player.hasReachedEast returned: false
-[METHOD START] AggressiveBrain.makeMove called with inputs: none
-[INFO] Resources stable. Moving East.
-[METHOD START] Path.Constructor called with inputs: none
-[METHOD END] Path.Constructor returned: void
-[METHOD START] Move.Constructor called with inputs: E
-[METHOD END] Move.Constructor returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Path.addMove called with inputs: Move(E)
-[METHOD END] Path.addMove returned: void
-[METHOD END] AggressiveBrain.makeMove returned: Move
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Path.getMoves called with inputs: none
-[METHOD END] Path.getMoves returned: List<Move> size: 1
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD START] Player.move called with inputs: Move(E)
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[METHOD END] Player.move returned: void
-[METHOD START] Move.getDirection called with inputs: none
-[METHOD END] Move.getDirection returned: E
-[INFO] Move chosen: E
-[METHOD START] Map.getSquare called with inputs: 19, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 19
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(19, 0)
-[INFO] Player stats reduced by - Food: 1, Water: 1, Strength: 1
-[INFO] [LOG] Stepped on Plains, applied effect.
-[METHOD START] Map.getSquare called with inputs: 19, 0
-[METHOD START] Square.getX called with inputs: none
-[METHOD END] Square.getX returned: 19
-[METHOD START] Square.getY called with inputs: none
-[METHOD END] Square.getY returned: 0
-[METHOD END] Map.getSquare returned: Square(19, 0)
-[METHOD START] Player.isAlive called with inputs: none
-[METHOD END] Player.isAlive returned: true
-[METHOD START] Player.hasReachedEast called with inputs: Map
-[METHOD START] Map.getCols called with inputs: none
-[METHOD END] Map.getCols returned: 20
+[METHOD END] Map.getCols returned: 10
 [METHOD END] Player.hasReachedEast returned: true
 [METHOD END] GameManager.run returned: void

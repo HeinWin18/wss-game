@@ -65,6 +65,7 @@ public class GameManager {
                 else {
                     // Normal movement logic goes here
                     player.move(move);
+                    System.out.println("Player moved " + move.getDirection() + " → Position: (" + player.getX() + ", " + player.getY() + ")");
                     Log.info("Move chosen: " + move.getDirection());
                     
                     // 5. Week 3 Integration logic: Apply terrain costs, item pickups.
